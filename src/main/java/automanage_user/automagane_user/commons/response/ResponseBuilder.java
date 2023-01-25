@@ -1,6 +1,6 @@
-package automanage_user.automagane_user.commons.Exceptions;
+package automanage_user.automagane_user.commons.response;
 
-import automanage_user.automagane_user.commons.Exceptions.ResponseBody;
+import automanage_user.automagane_user.commons.response.ResponseBody;
 import ch.qos.logback.core.status.ErrorStatus;
 import lombok.experimental.UtilityClass;
 import org.springframework.http.HttpStatus;
@@ -24,7 +24,7 @@ public class ResponseBuilder {
         return ResponseBody
                 .<String>init()
                 .message(exception.getMessage())
-                .status(500)
+                .status(200)
                 .build();
     }
 
@@ -42,7 +42,7 @@ public class ResponseBuilder {
         return ResponseBody
                 .<String>init()
                 .message(exception.getMessage())
-                .status(300)
+                .status(400)
                 .build();
     }
 
@@ -50,7 +50,7 @@ public class ResponseBuilder {
         return ResponseBody
                 .<String>init()
                 .message(exception.getMessage())
-                .status(code)
+                .status(500)
                 .build();
     }
 }

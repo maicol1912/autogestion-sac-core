@@ -1,5 +1,6 @@
-package automanage_user.automagane_user.commons.Exceptions;
+package automanage_user.automagane_user.commons.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.http.HttpStatus;
@@ -11,5 +12,6 @@ public class ResponseBody<T> {
     private String message;
     private Integer status;
     private boolean error;
+
 
 }

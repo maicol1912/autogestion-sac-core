@@ -1,13 +1,12 @@
 package automanage_user.automagane_user.infraestructure.Controller;
 
+import automanage_user.automagane_user.commons.response.ResponseBody;
 import automanage_user.automagane_user.domain.entity.User;
 import automanage_user.automagane_user.infraestructure.interfaceService.IUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @RestController
 @RequestMapping(value = "/sumas/usuarios")
@@ -19,12 +18,14 @@ public class UserController {
 
     @PostMapping("/save/user")
     @ResponseStatus(HttpStatus.OK)
-    public Map<String,String> saveInfoEmpleado(@RequestBody User infoUsuario){
+    public ResponseEntity<ResponseBody<?>> saveInfoEmpleado(@RequestBody User infoUsuario){
         informacionUsuario.save(infoUsuario);
-        Map<String,String>response = new HashMap<String,String>();
-        response.put("message","con exito");
-        response.put("status", String.valueOf(HttpStatus.OK));
-        return response;
+        return new ResponseEntity<>(ResponseBody
+                .init()
+                .data(infoUsuario)
+                .status(200)
+                .message("guardado con exito")
+                .build(),HttpStatus.OK);
     }
 
 }

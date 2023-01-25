@@ -1,14 +1,17 @@
 package automanage_user.automagane_user.infraestructure.Controller;
 
+import automanage_user.automagane_user.commons.response.ResponseBody;
+import automanage_user.automagane_user.domain.dto.querys.PuntoCreditoDto;
 import automanage_user.automagane_user.domain.entity.Employed;
-import automanage_user.automagane_user.domain.entity.User;
+import automanage_user.automagane_user.domain.dto.querys.PuntoCreditoRowMapper;
 import automanage_user.automagane_user.infraestructure.interfaceService.IEmployed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/sumas/usuarios")
@@ -18,14 +21,17 @@ public class EmployedController {
     private IEmployed informacionEmpleado;
 
     @PostMapping("/save/employed")
-    @ResponseStatus(HttpStatus.OK)
-    public Map<String,?>saveInfoEmpleado(@RequestBody Employed infoEmpleado){
+    public ResponseEntity<ResponseBody<?>>saveInfoEmpleado(@RequestBody Employed infoEmpleado){
         System.out.println(infoEmpleado.getFirstLastName());
         informacionEmpleado.save(infoEmpleado);
-        Map<String,String>response = new HashMap<String,String>();
-        response.put("message","con exito");
-        response.put("status", String.valueOf(HttpStatus.OK));
-        return response;
+        return new ResponseEntity<>(ResponseBody
+                .init()
+                .data(infoEmpleado)
+                .status(200)
+                .message("guardado con exito")
+                .build(),HttpStatus.OK);
     }
+
+
 
 }

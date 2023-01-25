@@ -1,13 +1,12 @@
 package automanage_user.automagane_user.infraestructure.Controller;
 
+import automanage_user.automagane_user.commons.response.ResponseBody;
 import automanage_user.automagane_user.domain.entity.UserCash;
 import automanage_user.automagane_user.infraestructure.interfaceService.IUserCash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @RestController
 @RequestMapping(value = "/sumas/usuarios")
@@ -20,12 +19,14 @@ public class UserCashController {
 
     @PostMapping("/save/user/cash")
     @ResponseStatus(HttpStatus.OK)
-    public Map<String,String> saveInfoEmpleado(@RequestBody UserCash infoUsuarioCaja){
+    public ResponseEntity<ResponseBody<?>> saveInfoEmpleado(@RequestBody UserCash infoUsuarioCaja){
         iUserCash.save(infoUsuarioCaja);
-        Map<String,String>response = new HashMap<String,String>();
-        response.put("message","con exito");
-        response.put("status", String.valueOf(HttpStatus.OK));
-        return response;
+        return new ResponseEntity<>(ResponseBody
+                .init()
+                .data(infoUsuarioCaja)
+                .status(200)
+                .message("guardado con exito")
+                .build(),HttpStatus.OK);
     }
 
 }
