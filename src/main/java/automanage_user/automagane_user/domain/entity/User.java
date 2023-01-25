@@ -11,28 +11,25 @@ import java.util.Date;
 @Getter
 @Setter
 @NoArgsConstructor
-@Entity
-@Table(name = "USER_ENTITY")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String usu_usuario;
 
-    private String typeIdentity;
+    private String epl_nroid;
 
-    private String numberIdentity;
-
-    private String names;
-
-    private String user_name;
-
-    private String password;
-
-    private String  userBlocked;
+    private String usu_password;
 
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date date;
+    private Date usu_fecha;
 
-    private String status;
+    private String usu_estado;
+
+    private String usu_email;
+
+    private String usu_usuariocorreo;
+
+    private String usu_pswcorreo;
+
+    private String usu_bloqueado;
 }

@@ -9,10 +9,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/sumas/usuarios")
+@RequestMapping(value = "${spring.base_url}")
 @CrossOrigin(value = "*")
 public class UserController {
-
+/*
     @Autowired
     private IUser informacionUsuario;
 
@@ -27,5 +27,5 @@ public class UserController {
                 .message("guardado con exito")
                 .build(),HttpStatus.OK);
     }
-
+*/
 }

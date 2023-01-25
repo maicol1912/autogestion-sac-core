@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/sumas/usuarios")
+@RequestMapping(value = "${spring.base_url}")
 @CrossOrigin(value = "*")
 public class EmailController {
 

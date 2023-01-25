@@ -1,8 +1,7 @@
 package automanage_user.automagane_user.aplication.services;
 
 
-import automanage_user.automagane_user.domain.entity.Employed;
-import automanage_user.automagane_user.domain.entity.User;
+import automanage_user.automagane_user.domain.entity.Empleado;
 import automanage_user.automagane_user.infraestructure.configuration.EncodeUrlVerification;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -32,16 +31,16 @@ public class SendEmail {
     @Autowired
     private EncodeUrlVerification encoder;
 
-    public Boolean sendNewEmailUser(Employed employed) throws MessagingException, IOException, TemplateException {
+    public Boolean sendNewEmailUser(Empleado empleado) throws MessagingException, IOException, TemplateException {
 
         try {
             MimeMessage messageAdmin = emailSender.createMimeMessage();
             Map<String, Object> modelAdmin = new HashMap<>();
-            modelAdmin.put("cedula", employed.getNumberId());
-            modelAdmin.put("nombre", employed.getFirstName());
-            modelAdmin.put("apellido", employed.getFirstLastName());
-            modelAdmin.put("empresa", employed.getCompany());
-            modelAdmin.put("link", "http/127.0.0.1:8080/sumas/usuarios/check/"+employed.getNumberId()+"/"+encoder.codificarUrl(employed.getNumberId()));
+            modelAdmin.put("cedula", empleado.getEpl_nroid());
+            modelAdmin.put("nombre", empleado.getEpl_nombreuno());
+            modelAdmin.put("apellido", empleado.getEpl_apellidouno());
+            modelAdmin.put("empresa", empleado.getEmp_empresa());
+            modelAdmin.put("link", "http/127.0.0.1:8080/sumas/usuarios/check/"+ empleado.getEpl_nroid()+"/"+encoder.codificarUrl(empleado.getEpl_nroid()));
             System.out.println("----------------");
             System.out.println(modelAdmin.get("link"));
             System.out.println("----------------");
@@ -51,7 +50,7 @@ public class SendEmail {
             String htmlAdmin = FreeMarkerTemplateUtils.processTemplateIntoString(template, modelAdmin);
 
             helperAdmin.setTo("maicoldev05@gmail.com");
-            helperAdmin.setSubject("validar Activacion Usuario: " + employed.getFirstName() + " "+employed.getFirstLastName());
+            helperAdmin.setSubject("validar Activacion Usuario: " + empleado.getEpl_nombreuno() + " "+ empleado.getEpl_apellidouno());
             helperAdmin.setText(htmlAdmin, true);
             emailSender.send(messageAdmin);
             LOGGER.info(String.format("se acaba de enviar un correo del usuario ->%S",modelAdmin.get("nombre")+" "+modelAdmin.get("apellido")));

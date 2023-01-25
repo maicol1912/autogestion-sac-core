@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/sumas/usuarios")
+@RequestMapping(value = "${spring.base_url}")
 @CrossOrigin(value = "*")
 public class QueryController {
 
