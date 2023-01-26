@@ -1,7 +1,7 @@
 package automanage_user.automagane_user.aplication.services;
 
 
-public class UserCashService{
+public class UsuarioPorCajaService {
 /*
     @Autowired
     private UserCashRepository userCashRepository;

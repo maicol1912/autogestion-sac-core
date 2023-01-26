@@ -1,18 +1,18 @@
-package automanage_user.automagane_user.domain.entity;
+package automanage_user.automagane_user.domain.dto;
 
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.*;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.util.Date;
 
-@Getter
-@Setter
+
 @NoArgsConstructor
-public class User {
-    @Id
+@Data
+public class UsuarioDto {
+
     private String usu_usuario;
 
     private String epl_nroid;

@@ -1,34 +1,25 @@
-package automanage_user.automagane_user.domain.entity;
+package automanage_user.automagane_user.domain.dto;
 
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.*;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.util.Date;
 
-@Getter
-@Setter
+
 @NoArgsConstructor
+@Data
 public class UsuarioPorCaja {
-    @Id
+
     private Integer emp_empresa;
-
-    @Id
     private Integer puc_puntoCredito;
-
-    @Id
     private String tpd_tipodoc;
-    @Id
     private Integer npd_secuencia;
-
-    @Id
     private Integer cpp_cajaporpuc;
-
-    @Id
     private String usu_usuario;
-
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date upc_fecha;

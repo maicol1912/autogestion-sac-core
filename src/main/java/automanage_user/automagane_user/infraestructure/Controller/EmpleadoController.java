@@ -1,7 +1,8 @@
 package automanage_user.automagane_user.infraestructure.Controller;
 
 import automanage_user.automagane_user.commons.response.ResponseBody;
-import automanage_user.automagane_user.domain.entity.UsuarioPorCaja;
+import automanage_user.automagane_user.domain.dto.EmpleadoDto;
+import automanage_user.automagane_user.infraestructure.interfaceService.IEmpleado;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,22 +11,21 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "${spring.base_url}")
 @CrossOrigin(value = "*")
-public class UserCashController {
+public class EmpleadoController {
+    @Autowired
+    private IEmpleado empleadoService;
 
-
-    /*@Autowired
-    private IUserCash iUserCash;
-
-    @PostMapping("/save/user/cash")
-    @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<ResponseBody<?>> saveInfoEmpleado(@RequestBody UsuarioPorCaja infoUsuarioCaja){
-        iUserCash.save(infoUsuarioCaja);
+    @PostMapping("/save/employed")
+    public ResponseEntity<ResponseBody<?>>saveInfoEmpleado(@RequestBody EmpleadoDto empleadoDto){
+        empleadoService.save(empleadoDto);
         return new ResponseEntity<>(ResponseBody
                 .init()
-                .data(infoUsuarioCaja)
+                .data(empleadoDto)
                 .status(200)
                 .message("guardado con exito")
                 .build(),HttpStatus.OK);
     }
-    */
+
+
+
 }

@@ -1,7 +1,6 @@
 package automanage_user.automagane_user.aplication.services;
 
-
-import automanage_user.automagane_user.domain.entity.Empleado;
+import automanage_user.automagane_user.domain.dto.EmpleadoDto;
 import automanage_user.automagane_user.infraestructure.configuration.EncodeUrlVerification;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -31,7 +30,7 @@ public class SendEmail {
     @Autowired
     private EncodeUrlVerification encoder;
 
-    public Boolean sendNewEmailUser(Empleado empleado) throws MessagingException, IOException, TemplateException {
+    public Boolean sendNewEmailUser(EmpleadoDto empleado) throws MessagingException, IOException, TemplateException {
 
         try {
             MimeMessage messageAdmin = emailSender.createMimeMessage();
