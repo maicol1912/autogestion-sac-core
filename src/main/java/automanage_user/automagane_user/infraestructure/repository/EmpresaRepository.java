@@ -17,8 +17,7 @@ public class EmpresaRepository {
     private JdbcTemplate jdbcTemplate;
 
     public List<EmpresaDto> listAll(){
-        List<EmpresaDto> listEmpresa = jdbcTemplate.query("Select emp_empresa,emp_nombre from sac_empresa",new EmpresaRowMapper());
-        System.out.println(listEmpresa);
+        List<EmpresaDto> listEmpresa = jdbcTemplate.query("SELECT emp_empresa,emp_nombre FROM sac_empresa ORDER BY emp_empresa ASC",new EmpresaRowMapper());
         return listEmpresa;
     }
 

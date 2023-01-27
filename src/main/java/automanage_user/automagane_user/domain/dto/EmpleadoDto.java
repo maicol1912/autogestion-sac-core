@@ -18,8 +18,6 @@ public class EmpleadoDto {
 
     private Integer emp_empresa;
 
-    private Integer puc_puntocredito;
-
     private Integer tpl_tipopersona;
 
     private Integer car_cargo;
@@ -32,9 +30,7 @@ public class EmpleadoDto {
 
     private String epl_apellidodos;
 
-    @Temporal(TemporalType.DATE)
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date epl_fecha;
+    private String epl_fecha;
 
     private String epl_estado;
 
