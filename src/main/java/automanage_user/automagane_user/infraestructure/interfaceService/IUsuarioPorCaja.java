@@ -1,10 +1,7 @@
 package automanage_user.automagane_user.infraestructure.interfaceService;
 
-import automanage_user.automagane_user.domain.dto.UsuarioDto;
-import automanage_user.automagane_user.domain.dto.UsuarioPorCaja;
-
-import java.util.Optional;
+import automanage_user.automagane_user.domain.dto.UsuarioPorCajaDto;
 
 public interface IUsuarioPorCaja {
-    public void save(UsuarioPorCaja usuarioPorCaja);
+    public UsuarioPorCajaDto save(UsuarioPorCajaDto usuarioPorCajaDto);
 }

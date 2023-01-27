@@ -1,22 +1,20 @@
 package automanage_user.automagane_user.aplication.services;
 
-import automanage_user.automagane_user.domain.entity.User;
+import automanage_user.automagane_user.domain.dto.UsuarioDto;
+import automanage_user.automagane_user.infraestructure.interfaceService.IUsuario;
+import automanage_user.automagane_user.infraestructure.repository.UsuarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
+public class UsuarioService implements IUsuario {
 
-public class UsuarioService {
-    /*
     @Autowired
-    private UserRepository userRepository;
+    private UsuarioRepository usuarioRepository;
+
 
     @Override
-    public void save(User user) {
-        userRepository.save(user);
+    public UsuarioDto save(UsuarioDto usuarioDto) {
+        return usuarioRepository.save(usuarioDto);
     }
-
-    @Override
-    public Optional<User> findById(Long id) {
-        return userRepository.findById(id);
-    }
-    */
-
 }

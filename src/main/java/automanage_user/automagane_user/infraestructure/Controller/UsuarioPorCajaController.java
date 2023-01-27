@@ -1,7 +1,7 @@
 package automanage_user.automagane_user.infraestructure.Controller;
 
 import automanage_user.automagane_user.commons.response.ResponseBody;
-import automanage_user.automagane_user.domain.dto.UsuarioPorCaja;
+import automanage_user.automagane_user.domain.dto.UsuarioPorCajaDto;
 import automanage_user.automagane_user.infraestructure.interfaceService.IUsuarioPorCaja;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,11 +19,11 @@ public class UsuarioPorCajaController {
 
     @PostMapping("/save/user/cash")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<ResponseBody<?>> saveInfoEmpleado(@RequestBody UsuarioPorCaja usuarioPorCaja){
-        usuarioPorCajaService.save(usuarioPorCaja);
+    public ResponseEntity<ResponseBody<?>> saveInfoEmpleado(@RequestBody UsuarioPorCajaDto usuarioPorCajaDto){
+        usuarioPorCajaService.save(usuarioPorCajaDto);
         return new ResponseEntity<>(ResponseBody
                 .init()
-                .data(usuarioPorCaja)
+                .data(usuarioPorCajaDto)
                 .status(200)
                 .message("guardado con exito")
                 .build(),HttpStatus.OK);

@@ -4,7 +4,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.util.Date;
@@ -12,7 +11,7 @@ import java.util.Date;
 
 @NoArgsConstructor
 @Data
-public class UsuarioPorCaja {
+public class UsuarioPorCajaDto {
 
     private Integer emp_empresa;
     private Integer puc_puntoCredito;

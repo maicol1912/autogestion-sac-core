@@ -15,7 +15,7 @@ public class PuntoCreditoRepository {
     private JdbcTemplate jdbcTemplate;
 
     public List<PuntoCreditoDto>listAll(){
-        List<PuntoCreditoDto> listPuntoCredito = jdbcTemplate.query("Select puc_nombre,puc_puntocredito from punto_credito",new PuntoCreditoRowMapper());
+        List<PuntoCreditoDto> listPuntoCredito = jdbcTemplate.query("Select puc_nombre,puc_puntocredito from sac_puntocredito",new PuntoCreditoRowMapper());
         System.out.println(listPuntoCredito);
         return listPuntoCredito;
     }

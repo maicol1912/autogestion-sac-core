@@ -11,8 +11,8 @@ public class EmpleadoService implements IEmpleado {
     @Autowired
     private EmpleadoRepository empleadoRepository;
     @Override
-    public void save(EmpleadoDto infoEmpleado) {
-        empleadoRepository.save(infoEmpleado);
+    public EmpleadoDto save(EmpleadoDto infoEmpleado) {
+        return empleadoRepository.save(infoEmpleado);
     }
 
 }

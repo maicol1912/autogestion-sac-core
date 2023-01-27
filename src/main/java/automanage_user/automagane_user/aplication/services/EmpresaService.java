@@ -6,9 +6,11 @@ import automanage_user.automagane_user.infraestructure.interfaceService.IEmpresa
 import automanage_user.automagane_user.infraestructure.repository.EmpresaRepository;
 import automanage_user.automagane_user.infraestructure.repository.PuntoCreditoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class EmpresaService implements IEmpresa {
 
     @Autowired

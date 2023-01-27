@@ -1,18 +1,21 @@
 package automanage_user.automagane_user.aplication.services;
 
 
-public class UsuarioPorCajaService {
-/*
+import automanage_user.automagane_user.domain.dto.UsuarioDto;
+import automanage_user.automagane_user.domain.dto.UsuarioPorCajaDto;
+import automanage_user.automagane_user.infraestructure.interfaceService.IUsuarioPorCaja;
+import automanage_user.automagane_user.infraestructure.repository.UsuarioPorCajaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UsuarioPorCajaService implements IUsuarioPorCaja {
+
     @Autowired
-    private UserCashRepository userCashRepository;
+    private UsuarioPorCajaRepository usuarioPorCajaRepository;
     @Override
-    public void save(UsuarioPorCaja infoUsuario) {
-        userCashRepository.save(infoUsuario);
+    public UsuarioPorCajaDto save(UsuarioPorCajaDto usuarioPorCajaDto) {
+        return usuarioPorCajaRepository.save(usuarioPorCajaDto);
     }
 
-    @Override
-    public Optional<UsuarioPorCaja> findById(Long id) {
-        return userCashRepository.findById(id);
-    }
-*/
 }

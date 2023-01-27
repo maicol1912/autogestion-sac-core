@@ -5,6 +5,6 @@ import automanage_user.automagane_user.domain.dto.UsuarioDto;
 
 public interface IUsuario {
 
-    public void save(UsuarioDto usuarioDto);
+    public UsuarioDto save(UsuarioDto usuarioDto);
 
 }
