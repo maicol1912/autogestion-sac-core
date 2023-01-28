@@ -40,5 +40,8 @@ public class EmailController {
         return "si es igual usuario activado";
     }*/
 
-
+    @GetMapping("/saludo")
+    public String saludar(){
+        return "hola mano";
+    }
 }
