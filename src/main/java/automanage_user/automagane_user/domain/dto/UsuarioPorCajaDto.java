@@ -15,12 +15,7 @@ public class UsuarioPorCajaDto {
 
     private Integer emp_empresa;
     private Integer puc_puntoCredito;
-    private String tpd_tipodoc;
-    private Integer npd_secuencia;
-    private Integer cpp_cajaporpuc;
     private String usu_usuario;
-    @Temporal(TemporalType.DATE)
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date upc_fecha;
+    private String upc_fecha;
     private String upc_estado;
 }

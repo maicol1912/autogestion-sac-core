@@ -15,7 +15,7 @@ public class PuntoCreditoService implements IPuntoCredito {
     private PuntoCreditoRepository puntoCreditoRepository;
 
     @Override
-    public List<PuntoCreditoDto> listAll() {
-        return puntoCreditoRepository.listAll();
+    public List<PuntoCreditoDto> listAll(Integer emp_empresa) {
+        return puntoCreditoRepository.listAll(emp_empresa);
     }
 }

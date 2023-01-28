@@ -21,9 +21,10 @@ public class QueryController {
     private EmpresaService empresaService;
 
 
-    @GetMapping("/puntocredito/list")
-    public List<PuntoCreditoDto> listPuntoCredito(){
-        return puntoCreditoService.listAll();
+    @GetMapping("/puntocredito/list/{emp_empresa}")
+    public List<PuntoCreditoDto> listPuntoCredito(@PathVariable String emp_empresa){
+        Integer emp_empresaInteger = Integer.parseInt(emp_empresa);
+        return puntoCreditoService.listAll(emp_empresaInteger);
     }
 
     @GetMapping("/empresa/list")

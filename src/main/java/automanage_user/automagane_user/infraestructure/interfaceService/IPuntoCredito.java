@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface IPuntoCredito {
 
-    public List<PuntoCreditoDto> listAll();
+    public List<PuntoCreditoDto> listAll(Integer emp_empresa);
 
 }
