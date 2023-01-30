@@ -17,7 +17,7 @@ public class ExceptionInterceptor {
     private static final Logger LOGGER = LoggerFactory.getLogger(ExceptionInterceptor.class);
     @ExceptionHandler(Exception.class)
     public ResponseBody<String> exceptionInterceptor(Exception exception) {
-        LOGGER.info(String.valueOf(exception));
+        LOGGER.error(String.valueOf(exception.getStackTrace()));
         return ResponseBuilder.failed(exception);
     }
 

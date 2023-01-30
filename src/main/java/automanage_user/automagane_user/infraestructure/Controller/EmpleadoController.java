@@ -18,7 +18,7 @@ public class EmpleadoController {
     private IEmpleado empleadoService;
 
     @PostMapping("/save/employed")
-    public ResponseEntity<ResponseBody<?>>saveInfoEmpleado(@RequestBody EmpleadoDto empleadoDto){
+    public ResponseEntity<ResponseBody<?>>saveEmpleado(@RequestBody EmpleadoDto empleadoDto){
         empleadoService.save(empleadoDto);
         return new ResponseEntity<>(ResponseBody
                 .init()

@@ -1,6 +1,9 @@
 package automanage_user.automagane_user.infraestructure.repository;
 
-import automanage_user.automagane_user.commons.Configuration.ConvertDate;
+import automanage_user.automagane_user.domain.dto.querys.CajaSecuenciaPucDto;
+import automanage_user.automagane_user.domain.dto.querys.CajaSecuenciaPucRowMapper;
+import automanage_user.automagane_user.domain.dto.querys.EmpresaRowMapper;
+import automanage_user.automagane_user.infraestructure.configuration.ConvertDate;
 import automanage_user.automagane_user.domain.dto.UsuarioPorCajaDto;
 import automanage_user.automagane_user.infraestructure.configuration.ObtenerSecuencia;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +13,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.AbstractMap;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -37,15 +42,22 @@ public class UsuarioPorCajaRepository {
             "tpd_tipodoc,npd_secuencia,cpp_cajaporpuc,usu_usuario,upc_fecha," +
             "upc_estado) values (?, ? ,? ,? ,? ,? ,?,?)";
 
-    @Transactional
     public UsuarioPorCajaDto save(UsuarioPorCajaDto uc) throws DataAccessException {
+        List<CajaSecuenciaPucDto>cajaPuc = obtenerSecuencia.obtenerCajaPorPuc(uc);
         Integer numeroSecuencias = obtenerSecuencia.obtenerSecuenciaPorPuntoCredito(uc);
-        Integer acum = 1;
+
         for(int secuencia = 0;secuencia<=numeroSecuencias;secuencia++){
-            jdbcTemplate.update(INSERT_USUARIO_POR_CAJA_QUERY, uc.getEmp_empresa(), uc.getPuc_puntoCredito(), tipodoc.get(acum), secuencia,
-                    secuencia, uc.getUsu_usuario(), convertDate.convertStringToDate(uc.getUpc_fecha()), uc.getUpc_estado());
-            System.out.println("guarde en la base de datos"+secuencia);
-            acum += 1;
+            Integer acum = 1;
+            while(acum<7){
+                System.out.println("caja por punto"+cajaPuc.get(3).getCajapuc());
+                System.out.println("secuencia"+cajaPuc.get(3).getSecuencia());
+                System.out.println("documento"+tipodoc.get(4));
+
+                jdbcTemplate.update(INSERT_USUARIO_POR_CAJA_QUERY, uc.getEmp_empresa(),uc.getPuc_puntoCredito(),cajaPuc.get(4).getTipodoc(),cajaPuc.get(4).getSecuencia(),
+                        cajaPuc.get(4).getCajapuc(),uc.getUsu_usuario(), convertDate.obtenerLocalDate(), "I");
+
+                acum = acum + 1;
+            }
         }
         return uc;
     }

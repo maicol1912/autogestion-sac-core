@@ -24,7 +24,7 @@ public class ResponseBuilder {
         return ResponseBody
                 .<String>init()
                 .message(exception.getMessage())
-                .status(200)
+                .status(500)
                 .build();
     }
 

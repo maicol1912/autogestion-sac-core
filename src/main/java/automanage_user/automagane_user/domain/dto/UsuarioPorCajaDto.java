@@ -12,10 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Data
 public class UsuarioPorCajaDto {
-
     private Integer emp_empresa;
     private Integer puc_puntoCredito;
     private String usu_usuario;
-    private String upc_fecha;
-    private String upc_estado;
 }

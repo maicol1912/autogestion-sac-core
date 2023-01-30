@@ -7,6 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import automanage_user.automagane_user.commons.response.ResponseBody;
+
+import java.security.NoSuchAlgorithmException;
+
 @RestController
 @RequestMapping(value = "${spring.base_url}")
 @CrossOrigin(value = "*")
@@ -17,7 +20,7 @@ public class UsuarioController {
 
     @PostMapping("/save/user")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<ResponseBody<?>> saveInfoEmpleado(@RequestBody UsuarioDto infoUsuario){
+    public ResponseEntity<ResponseBody<?>> saveInfoEmpleado(@RequestBody UsuarioDto infoUsuario) throws NoSuchAlgorithmException {
         usuarioService.save(infoUsuario);
         return new ResponseEntity<>(
                 ResponseBody

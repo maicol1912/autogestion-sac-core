@@ -6,6 +6,8 @@ import automanage_user.automagane_user.infraestructure.repository.UsuarioReposit
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.security.NoSuchAlgorithmException;
+
 @Service
 public class UsuarioService implements IUsuario {
 
@@ -14,7 +16,7 @@ public class UsuarioService implements IUsuario {
 
 
     @Override
-    public UsuarioDto save(UsuarioDto usuarioDto) {
+    public UsuarioDto save(UsuarioDto usuarioDto){
         return usuarioRepository.save(usuarioDto);
     }
 }

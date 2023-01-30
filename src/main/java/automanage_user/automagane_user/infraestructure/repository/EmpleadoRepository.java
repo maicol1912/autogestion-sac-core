@@ -1,14 +1,11 @@
 package automanage_user.automagane_user.infraestructure.repository;
 
-import automanage_user.automagane_user.commons.Configuration.ConvertDate;
+import automanage_user.automagane_user.infraestructure.configuration.ConvertDate;
 import automanage_user.automagane_user.domain.dto.EmpleadoDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-
-import java.sql.Date;
-import java.text.ParseException;
 
 
 @Component
@@ -24,10 +21,9 @@ public class EmpleadoRepository {
             "epl_apellidouno,epl_apellidodos,epl_fecha,epl_estado) values (?, ? ,? ,? ,? ,? ,? ,? ,?,?,?)";
 
     public EmpleadoDto save(EmpleadoDto e) throws DataAccessException{
-        System.out.println(e.getEpl_fecha());
-        jdbcTemplate.update(INSERT_QUERY,e.getTpi_tipoid(),e.getEpl_nroid(),e.getEmp_empresa(),e.getTpl_tipopersona(),
-                            e.getCar_cargo(),e.getEpl_nombreuno(),e.getEpl_nombredos(),e.getEpl_apellidouno(),e.getEpl_apellidodos(),
-                            convertDate.convertStringToDate(e.getEpl_fecha()),"I");
+        jdbcTemplate.update(INSERT_QUERY,13,e.getEpl_nroid(),e.getEmp_empresa(),2,
+                            2,e.getEpl_nombreuno(),e.getEpl_nombredos(),e.getEpl_apellidouno(),e.getEpl_apellidodos(),
+                            convertDate.obtenerLocalDate(),"I");
         return e;
     }
 }

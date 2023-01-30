@@ -17,8 +17,4 @@ public class UsuarioDto {
 
     private String epl_nroid;
 
-    private String usu_password;
-
-    private String usu_fecha;
-
 }
