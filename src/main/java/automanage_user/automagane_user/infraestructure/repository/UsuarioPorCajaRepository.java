@@ -1,19 +1,15 @@
 package automanage_user.automagane_user.infraestructure.repository;
 
+import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
 import automanage_user.automagane_user.domain.dto.querys.CajaSecuenciaPucDto;
-import automanage_user.automagane_user.domain.dto.querys.CajaSecuenciaPucRowMapper;
-import automanage_user.automagane_user.domain.dto.querys.EmpresaRowMapper;
 import automanage_user.automagane_user.infraestructure.configuration.ConvertDate;
-import automanage_user.automagane_user.domain.dto.UsuarioPorCajaDto;
 import automanage_user.automagane_user.infraestructure.configuration.ObtenerSecuencia;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.AbstractMap;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -42,9 +38,9 @@ public class UsuarioPorCajaRepository {
             "tpd_tipodoc,npd_secuencia,cpp_cajaporpuc,usu_usuario,upc_fecha," +
             "upc_estado) values (?, ? ,? ,? ,? ,? ,?,?)";
 
-    public UsuarioPorCajaDto save(UsuarioPorCajaDto uc) throws DataAccessException {
-        List<CajaSecuenciaPucDto>cajaPuc = obtenerSecuencia.obtenerCajaPorPuc(uc);
-        Integer numeroSecuencias = obtenerSecuencia.obtenerSecuenciaPorPuntoCredito(uc);
+    public UsuarioGeneralDto save(UsuarioGeneralDto ug) throws DataAccessException {
+        List<CajaSecuenciaPucDto>cajaPuc = obtenerSecuencia.obtenerCajaPorPuc(ug);
+        Integer numeroSecuencias = obtenerSecuencia.obtenerSecuenciaPorPuntoCredito(ug);
 
         for(int secuencia = 0;secuencia<=numeroSecuencias;secuencia++){
             Integer acum = 1;

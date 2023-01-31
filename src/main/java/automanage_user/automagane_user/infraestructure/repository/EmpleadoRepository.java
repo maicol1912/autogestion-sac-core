@@ -1,7 +1,7 @@
 package automanage_user.automagane_user.infraestructure.repository;
 
+import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
 import automanage_user.automagane_user.infraestructure.configuration.ConvertDate;
-import automanage_user.automagane_user.domain.dto.EmpleadoDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -20,10 +20,10 @@ public class EmpleadoRepository {
             "emp_empresa,tpl_tipopersona,car_cargo,epl_nombreuno,epl_nombredos," +
             "epl_apellidouno,epl_apellidodos,epl_fecha,epl_estado) values (?, ? ,? ,? ,? ,? ,? ,? ,?,?,?)";
 
-    public EmpleadoDto save(EmpleadoDto e) throws DataAccessException{
-        jdbcTemplate.update(INSERT_QUERY,13,e.getEpl_nroid(),e.getEmp_empresa(),2,
-                            2,e.getEpl_nombreuno(),e.getEpl_nombredos(),e.getEpl_apellidouno(),e.getEpl_apellidodos(),
+    public UsuarioGeneralDto save(UsuarioGeneralDto u) throws DataAccessException{
+        jdbcTemplate.update(INSERT_QUERY,13,u.getEpl_nroid(),u.getEmp_empresa(),2,
+                            2,u.getEpl_nombreuno(),u.getEpl_nombredos(),u.getEpl_apellidouno(),u.getEpl_apellidodos(),
                             convertDate.obtenerLocalDate(),"I");
-        return e;
+        return u;
     }
 }

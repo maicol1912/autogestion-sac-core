@@ -1,4 +1,4 @@
-package com.ecommerce_rest.ecommerce_rest.commons.Exceptions;
+package automanage_user.automagane_user.commons.Exceptions;
 
 import ch.qos.logback.core.status.ErrorStatus;
 

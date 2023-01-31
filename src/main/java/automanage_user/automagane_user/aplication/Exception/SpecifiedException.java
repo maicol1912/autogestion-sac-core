@@ -1,6 +1,7 @@
 package automanage_user.automagane_user.aplication.Exception;
 
-import com.ecommerce_rest.ecommerce_rest.commons.Exceptions.AplicationException;
+
+import automanage_user.automagane_user.commons.Exceptions.AplicationException;
 
 public class SpecifiedException extends AplicationException {
     private Integer status;

@@ -1,7 +1,7 @@
 package automanage_user.automagane_user.infraestructure.interfaceService;
 
-import automanage_user.automagane_user.domain.dto.UsuarioPorCajaDto;
+import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
 
 public interface IUsuarioPorCaja {
-    public UsuarioPorCajaDto save(UsuarioPorCajaDto usuarioPorCajaDto);
+    public UsuarioGeneralDto save(UsuarioGeneralDto usuarioPorCajaDto);
 }

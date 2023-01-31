@@ -7,6 +7,7 @@ import automanage_user.automagane_user.domain.dto.querys.PuntoCreditoDto;
 import automanage_user.automagane_user.infraestructure.configuration.EncriptarPassword;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.NoSuchAlgorithmException;
