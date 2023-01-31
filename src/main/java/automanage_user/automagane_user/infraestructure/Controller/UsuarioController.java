@@ -25,12 +25,10 @@ public class UsuarioController {
 
     @Autowired
     private IUsuarioPorCaja usuarioPorCajaService;
-    @PostMapping("/save/user")
+    @PostMapping("/save/empleado")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<ResponseBody<?>> saveInfoEmpleado(@RequestBody UsuarioGeneralDto usuarioGeneralDto) throws NoSuchAlgorithmException {
-        usuarioService.save(usuarioGeneralDto);
+    public ResponseEntity<ResponseBody<?>> saveEmpleado(@RequestBody UsuarioGeneralDto usuarioGeneralDto) throws NoSuchAlgorithmException {
         empleadoService.save(usuarioGeneralDto);
-        usuarioPorCajaService.save(usuarioGeneralDto);
         return new ResponseEntity<>(
                 ResponseBody
                 .init()
@@ -38,6 +36,30 @@ public class UsuarioController {
                 .status(200)
                 .message("guardado con exito")
                 .build(),HttpStatus.OK);
+    }
+
+    @PostMapping("/save/user")
+    public ResponseEntity<ResponseBody<?>> saveUser(@RequestBody UsuarioGeneralDto usuarioGeneralDto) throws NoSuchAlgorithmException {
+        usuarioService.save(usuarioGeneralDto);
+        return new ResponseEntity<>(
+                ResponseBody
+                        .init()
+                        .data(usuarioGeneralDto)
+                        .status(200)
+                        .message("guardado con exito")
+                        .build(),HttpStatus.OK);
+    }
+
+    @PostMapping("/save/user-cash")
+    public ResponseEntity<ResponseBody<?>> saveUserCash(@RequestBody UsuarioGeneralDto usuarioGeneralDto) throws NoSuchAlgorithmException {
+        usuarioPorCajaService.save(usuarioGeneralDto);
+        return new ResponseEntity<>(
+                ResponseBody
+                        .init()
+                        .data(usuarioGeneralDto)
+                        .status(200)
+                        .message("guardado con exito")
+                        .build(),HttpStatus.OK);
     }
 
 }

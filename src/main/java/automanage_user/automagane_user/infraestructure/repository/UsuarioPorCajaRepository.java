@@ -42,19 +42,14 @@ public class UsuarioPorCajaRepository {
         List<CajaSecuenciaPucDto>cajaPuc = obtenerSecuencia.obtenerCajaPorPuc(ug);
         Integer numeroSecuencias = obtenerSecuencia.obtenerSecuenciaPorPuntoCredito(ug);
 
-        for(int secuencia = 0;secuencia<=numeroSecuencias;secuencia++){
-            Integer acum = 1;
-            while(acum<7){
-                System.out.println("caja por punto"+cajaPuc.get(3).getCajapuc());
-                System.out.println("secuencia"+cajaPuc.get(3).getSecuencia());
-                System.out.println("documento"+tipodoc.get(4));
+        for(int acum = 0;acum<=cajaPuc.size()-1;acum++){
+                System.out.println("caja por punto"+cajaPuc.get(acum).getCajapuc());
+                System.out.println("secuencia"+cajaPuc.get(acum).getSecuencia());
+                System.out.println("documento"+tipodoc.get(acum));
 
-                jdbcTemplate.update(INSERT_USUARIO_POR_CAJA_QUERY, uc.getEmp_empresa(),uc.getPuc_puntoCredito(),cajaPuc.get(4).getTipodoc(),cajaPuc.get(4).getSecuencia(),
-                        cajaPuc.get(4).getCajapuc(),uc.getUsu_usuario(), convertDate.obtenerLocalDate(), "I");
-
-                acum = acum + 1;
-            }
+                jdbcTemplate.update(INSERT_USUARIO_POR_CAJA_QUERY, ug.getEmp_empresa(),ug.getPuc_puntoCredito(),cajaPuc.get(acum).getTipodoc(),cajaPuc.get(acum).getSecuencia(),
+                        cajaPuc.get(acum).getCajapuc(),ug.getUsu_usuario(), convertDate.obtenerLocalDate(), "I");
         }
-        return uc;
+        return ug;
     }
 }
