@@ -1,6 +1,7 @@
 package automanage_user.automagane_user.commons.Exceptions;
 import automanage_user.automagane_user.aplication.Exception.GenericExceptions;
 import automanage_user.automagane_user.aplication.Exception.NotFoundException;
+import automanage_user.automagane_user.aplication.Exception.NotValidException;
 import automanage_user.automagane_user.aplication.Exception.SpecifiedException;
 import automanage_user.automagane_user.commons.response.ResponseBody;
 import automanage_user.automagane_user.commons.response.ResponseBuilder;
@@ -18,7 +19,7 @@ public class ExceptionInterceptor {
     @ExceptionHandler(Exception.class)
     public ResponseBody<String> exceptionInterceptor(Exception exception) {
         LOGGER.error(String.valueOf(exception.getStackTrace()));
-        return ResponseBuilder.failed(exception);
+        return ResponseBuilder.specifiedFailed("INTERNAL SERVER ERROR");
     }
 
 
@@ -30,8 +31,8 @@ public class ExceptionInterceptor {
 
     @ExceptionHandler(SpecifiedException.class)
     public ResponseBody<String> specifiedException(SpecifiedException exception) {
-        LOGGER.info(String.valueOf(exception));
-        return ResponseBuilder.failed(exception,exception.getStatus());
+        LOGGER.error(String.valueOf(exception));
+        return ResponseBuilder.specifiedFailed(exception.getMessage());
     }
 
     @ExceptionHandler(GenericExceptions.class)
@@ -40,5 +41,10 @@ public class ExceptionInterceptor {
         return ResponseBuilder.failed(exception,exception.getStatus());
     }
 
+    @ExceptionHandler(NotValidException.class)
+    public ResponseBody<String> notValidException(NotValidException exception) {
+        LOGGER.info(String.valueOf(exception));
+        return ResponseBuilder.failed(exception,exception.getStatus());
+    }
 
 }

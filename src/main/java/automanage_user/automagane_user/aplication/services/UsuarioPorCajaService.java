@@ -1,6 +1,7 @@
 package automanage_user.automagane_user.aplication.services;
 
 
+import automanage_user.automagane_user.aplication.Validaciones.FormatearUsuario;
 import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
 import automanage_user.automagane_user.infraestructure.interfaceService.IUsuarioPorCaja;
 import automanage_user.automagane_user.infraestructure.repository.UsuarioPorCajaRepository;
@@ -12,9 +13,12 @@ public class UsuarioPorCajaService implements IUsuarioPorCaja {
 
     @Autowired
     private UsuarioPorCajaRepository usuarioPorCajaRepository;
+
+    @Autowired
+    private FormatearUsuario formatearUsuario;
     @Override
-    public UsuarioGeneralDto save(UsuarioGeneralDto UsuarioGeneralDto) {
-        return usuarioPorCajaRepository.save(UsuarioGeneralDto);
+    public UsuarioGeneralDto save(UsuarioGeneralDto usuarioGeneralDto) {
+        return usuarioPorCajaRepository.save(formatearUsuario.formatearEntidadUsuario(usuarioGeneralDto));
     }
 
 }

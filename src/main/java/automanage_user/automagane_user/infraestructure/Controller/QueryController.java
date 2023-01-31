@@ -42,7 +42,7 @@ public class QueryController {
     }
 
     @GetMapping("/secuencia/list")
-    public Date listSecuencia(){
-        return convertDate.obtenerLocalDateTime();
+    public String listSecuencia(){
+        return "hola";
     }
 }

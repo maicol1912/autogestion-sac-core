@@ -38,19 +38,21 @@ public class ResponseBuilder {
                 .build();
     }
 
-    public ResponseBody<String> failed(Throwable exception, ErrorStatus status) {
-        return ResponseBody
-                .<String>init()
-                .message(exception.getMessage())
-                .status(400)
-                .build();
-    }
 
     public ResponseBody<String> failed(Throwable exception,Integer code) {
         return ResponseBody
                 .<String>init()
                 .message(exception.getMessage())
                 .status(500)
+                .build();
+    }
+
+    public ResponseBody<String> specifiedFailed(String message) {
+        return ResponseBody
+                .<String>init()
+                .message(message)
+                .status(500)
+                .error(true)
                 .build();
     }
 }
