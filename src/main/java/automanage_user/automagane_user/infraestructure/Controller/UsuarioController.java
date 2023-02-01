@@ -1,9 +1,12 @@
 package automanage_user.automagane_user.infraestructure.Controller;
 
+import automanage_user.automagane_user.commons.Exceptions.Interceptor.ExceptionInterceptor;
 import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
 import automanage_user.automagane_user.infraestructure.interfaceService.IEmpleado;
 import automanage_user.automagane_user.infraestructure.interfaceService.IUsuario;
 import automanage_user.automagane_user.infraestructure.interfaceService.IUsuarioPorCaja;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +21,7 @@ import java.security.NoSuchAlgorithmException;
 @CrossOrigin(value = "*")
 public class UsuarioController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(UsuarioController.class);
     @Autowired
     private IUsuario usuarioService;
 
@@ -30,9 +34,13 @@ public class UsuarioController {
     @ResponseStatus(HttpStatus.OK)
     @Transactional
     public ResponseEntity<ResponseBody<?>> saveUsuario(@RequestBody UsuarioGeneralDto usuarioGeneralDto) throws NoSuchAlgorithmException {
+        LOGGER.info("Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja");
+
         empleadoService.save(usuarioGeneralDto);
         usuarioService.save(usuarioGeneralDto);
         usuarioPorCajaService.save(usuarioGeneralDto);
+
+        LOGGER.info("se guardo la entidad UsuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja");
         return new ResponseEntity<>(
                 ResponseBody
                 .init()
@@ -40,30 +48,6 @@ public class UsuarioController {
                 .code(200)
                 .message("guardado con exito")
                 .build(),HttpStatus.OK);
-    }
-
-    @PostMapping("/save/user")
-    public ResponseEntity<ResponseBody<?>> saveUser(@RequestBody UsuarioGeneralDto usuarioGeneralDto) throws NoSuchAlgorithmException {
-        usuarioService.save(usuarioGeneralDto);
-        return new ResponseEntity<>(
-                ResponseBody
-                        .init()
-                        .data(usuarioGeneralDto)
-                        .code(200)
-                        .message("guardado con exito")
-                        .build(),HttpStatus.OK);
-    }
-
-    @PostMapping("/save/user-cash")
-    public ResponseEntity<ResponseBody<?>> saveUserCash(@RequestBody UsuarioGeneralDto usuarioGeneralDto) throws NoSuchAlgorithmException {
-        usuarioPorCajaService.save(usuarioGeneralDto);
-        return new ResponseEntity<>(
-                ResponseBody
-                        .init()
-                        .data(usuarioGeneralDto)
-                        .code(200)
-                        .message("guardado con exito")
-                        .build(),HttpStatus.OK);
     }
 
 }

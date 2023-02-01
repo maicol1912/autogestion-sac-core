@@ -6,6 +6,8 @@ import automanage_user.automagane_user.aplication.services.SendEmail;
 import automanage_user.automagane_user.commons.response.ResponseBody;
 import automanage_user.automagane_user.infraestructure.configuration.EncodeUrlVerification;
 import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +21,7 @@ import javax.transaction.Transactional;
 @CrossOrigin(value = "*")
 public class ValidationUserController {
 
-
+    private static final Logger LOGGER = LoggerFactory.getLogger(ValidationUserController.class);
     @Autowired
     private EncodeUrlVerification encriptarUrl;
 
@@ -64,18 +66,23 @@ public class ValidationUserController {
     @GetMapping("/validate/activar/{cedula}")
     @Transactional
     public ResponseEntity<ResponseBody<?>>cambiarEstadoUsuario(@PathVariable String cedula,@RequestHeader("Authorization") String authorization){
-        System.out.println(authorization);
 
+        LOGGER.info("Se inicia proceso de validacion de los datos del empleado para el cambio de estado");
         if(!validacionEmpleadoService.validateCambioEstadoEmpleado(cedula)){
             throw new NotFoundActivateUser("el empleado no puede ser cambiado de estado porque no existe");
         }
-        if(!validacionUsuarioService.validateCambioEstadoEmpleado(cedula)){
+        LOGGER.info("Se inicia proceso de validacion de los datos del usuario para el cambio de estado");
+        if(!validacionUsuarioService.validateCambioEstadoUsuario(cedula)){
             throw new NotFoundActivateUser("el empleado no puede ser cambiado de estado porque no existe");
         }
+        LOGGER.info("Se inicia proceso de validacion de los datos del usuario por caja para el cambio de estado");
         if(!validacionUsuarioPorCajaService.validateCambioEstadoUsuarioPorCaja(cedula)){
             throw new NotFoundActivateUser("el empleado no puede ser cambiado de estado porque no existe");
         }
+        LOGGER.info("Se inicia proceso de validacion del token enviado");
         validacionCambioEstadoUsuario.validarToken(authorization);
+
+        LOGGER.info("Se inicia proceso de validacion del usuario que va a ser cambiado");
         validacionCambioEstadoUsuario.validarEstadoUsuarioParaCambio(cedula);
         return new ResponseEntity<>(
                 ResponseBody

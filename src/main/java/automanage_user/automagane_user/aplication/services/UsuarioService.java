@@ -29,7 +29,7 @@ public class UsuarioService implements IUsuario {
 
     @Override
     public Boolean cambiarEstadoUsuario(String cedula) {
-        if(!validacionUsuarioService.validateCambioEstadoEmpleado(cedula)){
+        if(!validacionUsuarioService.validateCambioEstadoUsuario(cedula)){
             return false;
         }
         return true;

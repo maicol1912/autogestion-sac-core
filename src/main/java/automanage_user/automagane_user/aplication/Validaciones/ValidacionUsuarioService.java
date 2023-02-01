@@ -25,7 +25,7 @@ public class ValidacionUsuarioService {
         return true;
     }
 
-    public Boolean validateCambioEstadoEmpleado(String cedula){
+    public Boolean validateCambioEstadoUsuario(String cedula){
         String FILTRAR_EXISTENCIA_EMPLEADO = String.format("select COUNT(*) from sai_usuario  where epl_nroid  ='%s'",cedula);
         if(FILTRAR_EXISTENCIA_EMPLEADO.equals(0)){
             throw new NotFoundActivateUser(CodigoErrorEnum.USUARIO_CAMBIAR_ESTADO.getMessage());
