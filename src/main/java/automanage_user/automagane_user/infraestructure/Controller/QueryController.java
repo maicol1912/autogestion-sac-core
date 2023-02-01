@@ -2,6 +2,7 @@ package automanage_user.automagane_user.infraestructure.Controller;
 
 import automanage_user.automagane_user.aplication.services.EmpresaService;
 import automanage_user.automagane_user.aplication.services.PuntoCreditoService;
+import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
 import automanage_user.automagane_user.domain.dto.querys.EmpresaDto;
 import automanage_user.automagane_user.domain.dto.querys.PuntoCreditoDto;
 import automanage_user.automagane_user.infraestructure.configuration.ConvertDate;
@@ -9,6 +10,8 @@ import automanage_user.automagane_user.infraestructure.configuration.EncriptarPa
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 import java.sql.Date;
 import java.util.List;
 
@@ -42,7 +45,11 @@ public class QueryController {
     }
 
     @GetMapping("/secuencia/list")
-    public String listSecuencia(){
-        return "hola";
+    public String listSecuencia(HttpServletRequest token){
+        String headerValue = token.getHeader("bearer-token");
+        if(headerValue.isEmpty()){
+            return "no enviaste valor";
+        }
+        return headerValue;
     }
 }

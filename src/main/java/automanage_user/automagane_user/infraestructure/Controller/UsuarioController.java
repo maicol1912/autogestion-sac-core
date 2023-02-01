@@ -29,7 +29,7 @@ public class UsuarioController {
     @PostMapping("/save/usuario")
     @ResponseStatus(HttpStatus.OK)
     @Transactional
-    public ResponseEntity<ResponseBody<?>> saveEmpleado(@RequestBody UsuarioGeneralDto usuarioGeneralDto) throws NoSuchAlgorithmException {
+    public ResponseEntity<ResponseBody<?>> saveUsuario(@RequestBody UsuarioGeneralDto usuarioGeneralDto) throws NoSuchAlgorithmException {
         empleadoService.save(usuarioGeneralDto);
         usuarioService.save(usuarioGeneralDto);
         usuarioPorCajaService.save(usuarioGeneralDto);
@@ -37,7 +37,7 @@ public class UsuarioController {
                 ResponseBody
                 .init()
                 .data(usuarioGeneralDto)
-                .status(200)
+                .code(200)
                 .message("guardado con exito")
                 .build(),HttpStatus.OK);
     }
@@ -49,7 +49,7 @@ public class UsuarioController {
                 ResponseBody
                         .init()
                         .data(usuarioGeneralDto)
-                        .status(200)
+                        .code(200)
                         .message("guardado con exito")
                         .build(),HttpStatus.OK);
     }
@@ -61,7 +61,7 @@ public class UsuarioController {
                 ResponseBody
                         .init()
                         .data(usuarioGeneralDto)
-                        .status(200)
+                        .code(200)
                         .message("guardado con exito")
                         .build(),HttpStatus.OK);
     }

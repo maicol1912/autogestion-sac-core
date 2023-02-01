@@ -8,10 +8,8 @@ public class NotValidException extends AplicationException {
     private HttpStatus status;
     private Integer code;
 
-    public NotValidException(String message,HttpStatus status,Integer code) {
+    public NotValidException(String message) {
         super(message);
-        this.status = status;
-        this.code = code;
     }
 
     public HttpStatus getStatus() {

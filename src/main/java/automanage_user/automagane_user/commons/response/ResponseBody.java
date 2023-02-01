@@ -10,8 +10,10 @@ import org.springframework.http.HttpStatus;
 public class ResponseBody<T> {
     private T data;
     private String message;
-    private Integer status;
+    private Integer code;
     private boolean error;
+
+
 
 
 }

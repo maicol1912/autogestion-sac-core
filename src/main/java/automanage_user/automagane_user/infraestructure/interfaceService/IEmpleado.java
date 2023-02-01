@@ -6,4 +6,5 @@ public interface IEmpleado {
 
     public UsuarioGeneralDto save(UsuarioGeneralDto empleadoDto);
 
+    public Boolean cambiarEstadoEmpleado(String cedula );
 }

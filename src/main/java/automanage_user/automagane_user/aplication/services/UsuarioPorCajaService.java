@@ -2,6 +2,7 @@ package automanage_user.automagane_user.aplication.services;
 
 
 import automanage_user.automagane_user.aplication.Validaciones.FormatearUsuario;
+import automanage_user.automagane_user.aplication.Validaciones.ValidacionUsuarioPorCajaService;
 import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
 import automanage_user.automagane_user.infraestructure.interfaceService.IUsuarioPorCaja;
 import automanage_user.automagane_user.infraestructure.repository.UsuarioPorCajaRepository;
@@ -15,10 +16,24 @@ public class UsuarioPorCajaService implements IUsuarioPorCaja {
     private UsuarioPorCajaRepository usuarioPorCajaRepository;
 
     @Autowired
+    private ValidacionUsuarioPorCajaService validacionUsuarioPorCajaService;
+    @Autowired
     private FormatearUsuario formatearUsuario;
     @Override
     public UsuarioGeneralDto save(UsuarioGeneralDto usuarioGeneralDto) {
-        return usuarioPorCajaRepository.save(formatearUsuario.formatearEntidadUsuario(usuarioGeneralDto));
+        if(validacionUsuarioPorCajaService.validateUsuarioPorCaja(formatearUsuario.formatearEntidadUsuario(usuarioGeneralDto))){
+            return usuarioPorCajaRepository.save(formatearUsuario.formatearEntidadUsuario(usuarioGeneralDto));
+        }
+        return null;
     }
+
+    @Override
+    public Boolean cambiarEstadoUsuarioPorCaja(String cedula) {
+        if(!validacionUsuarioPorCajaService.validateCambioEstadoUsuarioPorCaja(cedula)){
+            return false;
+        }
+        return true;
+    }
+
 
 }

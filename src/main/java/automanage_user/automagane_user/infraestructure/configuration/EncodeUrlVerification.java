@@ -33,4 +33,11 @@ public class EncodeUrlVerification {
         String desencriptado = String.valueOf(array);
         return desencriptado;
     }
+
+    public Boolean validarToken(String token){
+        if(!token.equals("1707a235937a8330cc761917450ffbad")){
+            return false;
+        }
+        return true;
+    }
 }

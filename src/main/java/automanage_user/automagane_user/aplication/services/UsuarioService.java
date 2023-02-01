@@ -26,4 +26,14 @@ public class UsuarioService implements IUsuario {
         }
         return null;
     }
+
+    @Override
+    public Boolean cambiarEstadoUsuario(String cedula) {
+        if(!validacionUsuarioService.validateCambioEstadoEmpleado(cedula)){
+            return false;
+        }
+        return true;
+    }
+
+
 }

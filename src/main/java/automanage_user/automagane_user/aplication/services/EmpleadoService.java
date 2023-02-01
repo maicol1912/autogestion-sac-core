@@ -29,4 +29,13 @@ public class EmpleadoService implements IEmpleado {
         return null;
     }
 
+    @Override
+    public Boolean cambiarEstadoEmpleado(String cedula) {
+        if(!validacionEmpleadoService.validateCambioEstadoEmpleado(cedula)){
+            return false;
+        }
+        return true;
+    }
+
+
 }
