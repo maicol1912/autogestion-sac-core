@@ -2,20 +2,20 @@ package automanage_user.automagane_user.commons.Exceptions.Interceptor;
 import automanage_user.automagane_user.aplication.Exception.*;
 import automanage_user.automagane_user.commons.Exceptions.CodigoErrorEnum;
 import automanage_user.automagane_user.commons.response.ResponseBody;
-import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import automanage_user.automagane_user.infraestructure.Controller.QueryController;
+import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-@Slf4j
+
 @RestControllerAdvice
 public class ExceptionInterceptor {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ExceptionInterceptor.class);
+    private static final Logger LOGGER = Logger.getLogger(QueryController.class);
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ResponseBody<?>> exceptionInterceptor(Exception exception) {
         LOGGER.error(String.valueOf(exception.getStackTrace()[0]));

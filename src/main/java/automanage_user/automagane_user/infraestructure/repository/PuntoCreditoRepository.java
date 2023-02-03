@@ -12,6 +12,7 @@ import java.util.List;
 @Component
 public class PuntoCreditoRepository {
 
+
     @Autowired
     private JdbcTemplate jdbcTemplate;
 

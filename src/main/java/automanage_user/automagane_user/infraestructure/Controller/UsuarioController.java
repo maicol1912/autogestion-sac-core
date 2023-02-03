@@ -5,8 +5,7 @@ import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
 import automanage_user.automagane_user.infraestructure.interfaceService.IEmpleado;
 import automanage_user.automagane_user.infraestructure.interfaceService.IUsuario;
 import automanage_user.automagane_user.infraestructure.interfaceService.IUsuarioPorCaja;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +20,7 @@ import java.security.NoSuchAlgorithmException;
 @CrossOrigin(value = "*")
 public class UsuarioController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(UsuarioController.class);
+    private static final Logger LOGGER = Logger.getLogger(UsuarioController.class);
     @Autowired
     private IUsuario usuarioService;
 
@@ -40,7 +39,6 @@ public class UsuarioController {
         usuarioService.save(usuarioGeneralDto);
         usuarioPorCajaService.save(usuarioGeneralDto);
 
-        LOGGER.info("se guardo la entidad UsuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja");
         return new ResponseEntity<>(
                 ResponseBody
                 .init()

@@ -6,8 +6,7 @@ import automanage_user.automagane_user.aplication.services.SendEmail;
 import automanage_user.automagane_user.commons.response.ResponseBody;
 import automanage_user.automagane_user.infraestructure.configuration.EncodeUrlVerification;
 import org.modelmapper.ModelMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +20,7 @@ import javax.transaction.Transactional;
 @CrossOrigin(value = "*")
 public class ValidationUserController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ValidationUserController.class);
+    private static final Logger LOGGER = Logger.getLogger(ValidationUserController.class);
     @Autowired
     private EncodeUrlVerification encriptarUrl;
 

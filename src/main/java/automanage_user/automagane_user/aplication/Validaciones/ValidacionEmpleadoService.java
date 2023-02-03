@@ -3,6 +3,7 @@ import automanage_user.automagane_user.aplication.Exception.NotFoundActivateUser
 import automanage_user.automagane_user.aplication.Exception.NotValidException;
 import automanage_user.automagane_user.commons.Exceptions.CodigoErrorEnum;
 import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
+import org.apache.log4j.Logger;
 import org.hibernate.annotations.NotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -11,6 +12,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class ValidacionEmpleadoService {
 
+    private static final Logger LOGGER = Logger.getLogger(ValidacionEmpleadoService.class);
+
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
@@ -18,6 +21,7 @@ public class ValidacionEmpleadoService {
     private ValidacionCaracteres validacionCaracteres;
 
     public Boolean validateEmpleado(UsuarioGeneralDto usuarioGeneralDto){
+        LOGGER.info("se inicia validacion de los campos del empleado");
         String FILTRAR_EXISTENCIA_CEDULA = String.format("select COUNT(*) from sai_empleado where epl_nroid = '%s'",usuarioGeneralDto.getEpl_nroid());
         String FILTRAR_EXISTENCIA_EMPRESA = String.format("select COUNT(*) from sac_empresa where emp_empresa = '%s'",usuarioGeneralDto.getEmp_empresa());
 
@@ -40,6 +44,8 @@ public class ValidacionEmpleadoService {
             System.out.println("entre validaciones");
             throw new NotValidException(CodigoErrorEnum.LONGITUD_USUARIO.getMessage());
         }
+
+        LOGGER.info("se valida campos del empleado y estos son -> validos");
         return true;
     }
 

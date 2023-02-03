@@ -19,7 +19,6 @@ public class ConvertDate {
     }
 
     public Date obtenerLocalDateTime(){
-
         LocalDateTime datetime = LocalDateTime.now();
         Date date = Date.valueOf(datetime.toString());
         return date;
