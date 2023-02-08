@@ -32,7 +32,7 @@ public class UsuarioRepository {
     private final String CAMBIAR_ESTADO_CLIENTE = "update sai_usuario set usu_estado = 'A'\n" +
             "where epl_nroid = ?";
 
-    private final String CONTRASEÑA_USUARIOS = "354c68cf3602cd244784bb01e14fc256";
+    private final String CONTRASEÑA_USUARIOS = "5b034533010375fbc25ce97ffcdd36bc";//generic1
     @Transactional
     public UsuarioGeneralDto save(UsuarioGeneralDto u) throws DataAccessException{
         jdbcTemplate.update(INSERT_QUERY,u.getUsu_usuario(),u.getEpl_nroid(),CONTRASEÑA_USUARIOS,convertDate.obtenerLocalDate(),

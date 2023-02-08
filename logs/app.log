@@ -607,3 +607,81 @@
 2023-02-08 14:00:44 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar contiene letras
 2023-02-08 14:00:51 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
 2023-02-08 14:00:51 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar contiene letras
+2023-02-08 14:02:34 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 14:02:34 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 14:02:35 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario ya esta usado
+2023-02-08 14:02:43 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 14:02:43 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: los datos ingresados de nombres o apellidos no son validos
+2023-02-08 14:02:53 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 14:02:53 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 14:02:53 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 14:02:53 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 14:03:26 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:03:26 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:03:55 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:03:55 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:04:01 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:04:01 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:04:13 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:04:13 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:04:18 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:04:18 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:04:21 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:04:21 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:04:35 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:04:35 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:04:47 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:04:47 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:05:23 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:05:23 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:05:45 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 14:05:46 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 14:05:46 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario que intentas ingresar no es valida debido a su tamaño
+2023-02-08 14:05:52 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 14:05:52 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 14:05:52 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 14:05:52 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 14:06:02 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:06:02 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:06:07 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:06:07 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:06:36 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:06:36 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:08:48 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:08:48 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:09:34 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:09:34 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:09:38 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:09:38 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:09:41 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:09:41 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:09:44 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:09:44 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:10:01 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:10:01 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:10:08 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:10:08 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:10:21 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:10:21 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:10:32 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:10:32 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:11:01 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:11:01 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:11:15 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:11:15 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:11:36 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:11:36 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:12:31 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:12:31 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:12:48 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:12:48 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:14:52 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:14:52 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:15:01 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:15:01 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:15:12 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 14:15:12 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 14:15:33 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:15:33 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 14:15:37 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 14:15:37 INFO  EmpresaService:20 - se listan las empresas disponibles
