@@ -1,11 +1,8 @@
 package automanage_user.automagane_user.infraestructure.repository;
-
 import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
-import automanage_user.automagane_user.infraestructure.Controller.QueryController;
 import automanage_user.automagane_user.infraestructure.configuration.ConvertDate;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 

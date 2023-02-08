@@ -28,7 +28,8 @@ public enum CodigoErrorEnum {
     NOT_TOKEN_VALID("el token que estas usando no es valido",409,HttpStatus.CONFLICT),
     USUARIO_YA_ACTIVO("el usuario que quieres activar ya esta activo",409,HttpStatus.CONFLICT),
     EMPLEADO_YA_ACTIVO("el empleado que quieres activar ya esta activo",409,HttpStatus.CONFLICT),
-    USUARIO_CAJA_YA_ACTIVO("el usuario por caja que quieres activar ya esta activo",409,HttpStatus.CONFLICT);
+    USUARIO_CAJA_YA_ACTIVO("el usuario por caja que quieres activar ya esta activo",409,HttpStatus.CONFLICT),
+    CEDULA_NO_EXISTE("la cedula no existe",409,HttpStatus.CONFLICT);
     private String message;
     private Integer code;
 

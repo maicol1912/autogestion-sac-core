@@ -1,6 +1,4 @@
 package automanage_user.automagane_user.infraestructure.repository;
-
-import automanage_user.automagane_user.infraestructure.Controller.QueryController;
 import automanage_user.automagane_user.infraestructure.configuration.ConvertDate;
 import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
 import org.apache.log4j.Logger;
@@ -8,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.transaction.Transactional;
 
@@ -36,9 +33,11 @@ public class UsuarioRepository {
 
     private final String CAMBIAR_ESTADO_CLIENTE = "update sai_usuario set usu_estado = 'A'\n" +
             "where epl_nroid = ?";
+
+    private final String CONTRASEÑA_USUARIOS = "354c68cf3602cd244784bb01e14fc256";
     @Transactional
     public UsuarioGeneralDto save(UsuarioGeneralDto u) throws DataAccessException{
-        jdbcTemplate.update(INSERT_QUERY,u.getUsu_usuario(),u.getEpl_nroid(),"354c68cf3602cd244784bb01e14fc256",convertDate.obtenerLocalDate(),
+        jdbcTemplate.update(INSERT_QUERY,u.getUsu_usuario(),u.getEpl_nroid(),CONTRASEÑA_USUARIOS,convertDate.obtenerLocalDate(),
                 "I","N");
 
         jdbcTemplate.update(INSERT_USUARIO_POR_CAJA_LOG_1,69,u.getUsu_usuario(),"sai_perfilporusu","M","10.212.140.17",u.getEpl_nroid().toString()+

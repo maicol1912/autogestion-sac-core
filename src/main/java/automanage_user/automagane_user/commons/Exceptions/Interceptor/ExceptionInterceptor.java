@@ -2,9 +2,8 @@ package automanage_user.automagane_user.commons.Exceptions.Interceptor;
 import automanage_user.automagane_user.aplication.Exception.*;
 import automanage_user.automagane_user.commons.Exceptions.CodigoErrorEnum;
 import automanage_user.automagane_user.commons.response.ResponseBody;
-
-import automanage_user.automagane_user.infraestructure.Controller.QueryController;
 import org.apache.log4j.Logger;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
@@ -99,6 +98,18 @@ public class ExceptionInterceptor {
                         .data(null)
                         .code(409)
                         .message("metodo no soportado")
+                        .build(), HttpStatus.CONFLICT);
+    }
+
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public  ResponseEntity<ResponseBody<?>> dataIntegrity(DataIntegrityViolationException exception) {
+        LOGGER.error(String.valueOf(exception));
+        return new ResponseEntity<>(
+                ResponseBody
+                        .init()
+                        .data(null)
+                        .code(409)
+                        .message("la data que intentas ingresar no es valida al insertarse")
                         .build(), HttpStatus.CONFLICT);
     }
 }

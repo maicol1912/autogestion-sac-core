@@ -1,10 +1,6 @@
 package automanage_user.automagane_user.aplication.Validaciones;
-
-import automanage_user.automagane_user.aplication.Exception.NotTokenValid;
-import automanage_user.automagane_user.aplication.Exception.NotValidException;
 import automanage_user.automagane_user.aplication.Exception.SpecifiedException;
 import automanage_user.automagane_user.commons.Exceptions.CodigoErrorEnum;
-import automanage_user.automagane_user.infraestructure.Controller.QueryController;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -14,18 +10,9 @@ import org.springframework.stereotype.Component;
 public class ValidacionCambioEstadoUsuario {
 
     private static final Logger LOGGER = Logger.getLogger(ValidacionCambioEstadoUsuario.class);
+    
     @Autowired
     private JdbcTemplate jdbcTemplate;
-
-    @Autowired
-    private ValidacionEmpleadoService validacionEmpleadoService;
-
-    @Autowired
-    private ValidacionUsuarioService validacionUsuarioService;
-
-    @Autowired
-    private ValidacionUsuarioPorCajaService validacionUsuarioPorCajaService;
-
 
 
     public Boolean validarEstadoUsuarioParaCambio(String cedula){

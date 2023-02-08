@@ -2,7 +2,6 @@ package automanage_user.automagane_user.infraestructure.repository;
 
 import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
 import automanage_user.automagane_user.domain.dto.querys.CajaSecuenciaPucDto;
-import automanage_user.automagane_user.infraestructure.Controller.QueryController;
 import automanage_user.automagane_user.infraestructure.configuration.ConvertDate;
 import automanage_user.automagane_user.infraestructure.configuration.ObtenerSecuencia;
 import org.apache.log4j.Logger;
@@ -12,11 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
-import java.util.AbstractMap;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Component
 public class UsuarioPorCajaRepository {
@@ -45,7 +40,6 @@ public class UsuarioPorCajaRepository {
     @Transactional
     public UsuarioGeneralDto save(UsuarioGeneralDto ug) throws DataAccessException {
         List<CajaSecuenciaPucDto>cajaPuc = obtenerSecuencia.obtenerCajaPorPuc(ug);
-        Integer numeroSecuencias = obtenerSecuencia.obtenerSecuenciaPorPuntoCredito(ug);
 
         for(int acum = 0;acum<=cajaPuc.size()-1;acum++){
                 jdbcTemplate.update(INSERT_USUARIO_POR_CAJA_QUERY, ug.getEmp_empresa(),ug.getPuc_puntoCredito(),cajaPuc.get(acum).getTipodoc(),cajaPuc.get(acum).getSecuencia(),

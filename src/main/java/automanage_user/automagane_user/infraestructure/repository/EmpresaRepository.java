@@ -2,8 +2,6 @@ package automanage_user.automagane_user.infraestructure.repository;
 
 import automanage_user.automagane_user.domain.dto.querys.EmpresaDto;
 import automanage_user.automagane_user.domain.dto.querys.EmpresaRowMapper;
-import automanage_user.automagane_user.domain.dto.querys.PuntoCreditoDto;
-import automanage_user.automagane_user.domain.dto.querys.PuntoCreditoRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;

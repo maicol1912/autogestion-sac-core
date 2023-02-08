@@ -4,7 +4,6 @@ import automanage_user.automagane_user.aplication.Exception.NotValidException;
 import automanage_user.automagane_user.commons.Exceptions.CodigoErrorEnum;
 import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
 import org.apache.log4j.Logger;
-import org.hibernate.annotations.NotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
@@ -38,10 +37,6 @@ public class ValidacionEmpleadoService {
 
         if(!validacionCaracteres.validarCaracter(usuarioGeneralDto)){
             throw new NotValidException(CodigoErrorEnum.DATOS_PERSONALES_NO_VLIDOS.getMessage());
-        }
-
-        if(!(usuarioGeneralDto.getUsu_usuario().length()>4 && usuarioGeneralDto.getUsu_usuario().length()<15)){
-            throw new NotValidException(CodigoErrorEnum.LONGITUD_USUARIO.getMessage());
         }
 
         LOGGER.info("se valida campos del empleado y estos son -> validos");

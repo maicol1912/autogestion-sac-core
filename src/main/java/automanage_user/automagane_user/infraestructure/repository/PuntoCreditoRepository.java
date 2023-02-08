@@ -5,7 +5,6 @@ import automanage_user.automagane_user.domain.dto.querys.PuntoCreditoRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 

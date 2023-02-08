@@ -1,6 +1,4 @@
 package automanage_user.automagane_user.infraestructure.Controller;
-
-import automanage_user.automagane_user.commons.Exceptions.Interceptor.ExceptionInterceptor;
 import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
 import automanage_user.automagane_user.infraestructure.interfaceService.IEmpleado;
 import automanage_user.automagane_user.infraestructure.interfaceService.IUsuario;

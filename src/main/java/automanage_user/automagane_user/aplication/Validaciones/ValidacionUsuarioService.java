@@ -24,7 +24,10 @@ public class ValidacionUsuarioService {
         if(!jdbcTemplate.queryForObject(FILTRAR_EXISTENCIA_USUARIO,int.class).equals(0)){
             throw new NotValidException(CodigoErrorEnum.USUARIO_USADO.getMessage());
         }
-        if(!(usuarioGeneraldto.getUsu_usuario().length()>4 && usuarioGeneraldto.getUsu_usuario().length()<15)){
+        if(!jdbcTemplate.queryForObject(FILTRAR_EXISTENCIA_CEDULA,int.class).equals(0)){
+            throw new NotValidException(CodigoErrorEnum.CEDULA_NO_EXISTE.getMessage());
+        }
+        if(!(usuarioGeneraldto.getUsu_usuario().length()>4 && usuarioGeneraldto.getUsu_usuario().length()<10)){
 
             throw new NotValidException(CodigoErrorEnum.USUARIO_USADO.getMessage());
         }

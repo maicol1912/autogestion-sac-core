@@ -1,7 +1,4 @@
 package automanage_user.automagane_user.aplication.Validaciones;
-
-import automanage_user.automagane_user.aplication.Exception.NotTokenValid;
-import automanage_user.automagane_user.commons.Exceptions.CodigoErrorEnum;
 import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;

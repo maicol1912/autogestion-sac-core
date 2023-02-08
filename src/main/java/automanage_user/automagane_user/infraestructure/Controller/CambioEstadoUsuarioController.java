@@ -1,11 +1,7 @@
 package automanage_user.automagane_user.infraestructure.Controller;
-
-import automanage_user.automagane_user.aplication.Validaciones.*;
 import automanage_user.automagane_user.aplication.services.CambiarEstadoService;
 import automanage_user.automagane_user.aplication.services.TokenService;
 import automanage_user.automagane_user.commons.response.ResponseBody;
-import automanage_user.automagane_user.infraestructure.configuration.EncodeUrlVerification;
-import org.modelmapper.ModelMapper;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,26 +17,7 @@ import javax.transaction.Transactional;
 public class CambioEstadoUsuarioController {
 
     private static final Logger LOGGER = Logger.getLogger(CambioEstadoUsuarioController.class);
-    @Autowired
-    private EncodeUrlVerification encriptarUrl;
-
-
-
-    @Autowired
-    private ModelMapper mapper;
-
-    @Autowired
-    private ValidacionEmpleadoService validacionEmpleadoService;
-
-    @Autowired
-    private ValidacionUsuarioService validacionUsuarioService;
-
-    @Autowired
-    private ValidacionUsuarioPorCajaService validacionUsuarioPorCajaService;
-
-    @Autowired
-    private ValidacionCambioEstadoUsuario validacionCambioEstadoUsuario;
-
+    
     @Autowired
     private TokenService tokenService;
     @Autowired
