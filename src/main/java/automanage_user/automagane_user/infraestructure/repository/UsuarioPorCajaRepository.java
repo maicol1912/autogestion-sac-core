@@ -37,6 +37,11 @@ public class UsuarioPorCajaRepository {
     private final String INSERT_USUARIO_POR_CAJA_LOG = "INSERT INTO sac_logmaestros ( opc_opcion , usu_usuario , lma_nomtabla , " +
             "lma_operacion , lma_ip , lma_campos_modif , lma_fecha ) VALUES (?,?,?,?,?,?,?)";
 
+    private final String CAMBIAR_ESTADO_USUARIO_CAJA = "update sac_usuarioporcaja\n" +
+            "set upc_estado = 'A'\n" +
+            "where usu_usuario in (select a.usu_usuario  from sac_usuarioporcaja a inner join sai_usuario b on a.usu_usuario = b.usu_usuario \n" +
+            "where  b.epl_nroid = ? )";
+
     @Transactional
     public UsuarioGeneralDto save(UsuarioGeneralDto ug) throws DataAccessException {
         List<CajaSecuenciaPucDto>cajaPuc = obtenerSecuencia.obtenerCajaPorPuc(ug);
@@ -54,4 +59,11 @@ public class UsuarioPorCajaRepository {
 
         return ug;
     }
+
+    @Transactional
+    public Boolean cambiarEstado(String cedula){
+        jdbcTemplate.update(CAMBIAR_ESTADO_USUARIO_CAJA,cedula);
+        return true;
+    }
+
 }

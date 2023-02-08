@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ExceptionInterceptor {
 
-    private static final Logger LOGGER = Logger.getLogger(QueryController.class);
+    private static final Logger LOGGER = Logger.getLogger(ExceptionInterceptor.class);
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ResponseBody<?>> exceptionInterceptor(Exception exception) {
         LOGGER.error(String.valueOf(exception.getStackTrace()[0]));

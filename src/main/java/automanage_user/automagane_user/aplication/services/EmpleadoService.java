@@ -34,7 +34,7 @@ public class EmpleadoService implements IEmpleado {
         if(!validacionEmpleadoService.validateCambioEstadoEmpleado(cedula)){
             return false;
         }
-        return true;
+        return empleadoRepository.cambiarEstado(cedula);
     }
 
 

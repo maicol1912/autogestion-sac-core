@@ -1,8 +1,15 @@
-2023-02-02 20:37:23 INFO  UsuarioController:36 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
-2023-02-02 20:37:25 ERROR QueryController:47 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula del empleado ya esta en uso
-2023-02-02 20:37:37 INFO  UsuarioController:36 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
-2023-02-02 20:37:38 INFO  EmpleadoRepository:33 - se realizo la insercion del usuario con cedula -> 10201738 en la tabla sai_empleado
-2023-02-02 20:37:38 INFO  UsuarioRepository:48 - se realizo la insercion del usuario con cedula -> 10201738 en la tabla sai_usuario
-2023-02-02 20:37:38 INFO  UsuarioRepository:49 - se realizo la insercion del usuario con cedula -> 10201738 en la tabla sac_logmaestros
-2023-02-02 20:37:43 INFO  UsuarioPorCajaRepository:52 - se realizo la insercion del usuario -> soaymak1. en la tabla sac_usuarioporcaja
-2023-02-02 20:37:43 INFO  UsuarioPorCajaRepository:53 - se realizo la insercion del usuario -> soaymak1. en la tabla sac_logmaestros
+2023-02-07 22:59:13 INFO  UsuarioController:36 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-07 22:59:13 INFO  ValidacionEmpleadoService:24 - se inicia validacion de los campos del empleado
+2023-02-07 22:59:13 INFO  ValidacionCaracteres:14 - se inicia validacion de los campos de informacion personal
+2023-02-07 22:59:13 INFO  ValidacionCaracteres:25 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-07 22:59:13 ERROR QueryController:47 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario que intentas ingresar no es valida debido a su tamaño
+2023-02-07 23:02:04 INFO  UsuarioController:36 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-07 23:02:04 INFO  ValidacionEmpleadoService:24 - se inicia validacion de los campos del empleado
+2023-02-07 23:02:04 INFO  ValidacionCaracteres:14 - se inicia validacion de los campos de informacion personal
+2023-02-07 23:02:04 INFO  ValidacionCaracteres:25 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-07 23:02:04 ERROR QueryController:47 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario que intentas ingresar no es valida debido a su tamaño
+2023-02-07 23:02:22 INFO  UsuarioController:36 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-07 23:02:22 INFO  ValidacionEmpleadoService:24 - se inicia validacion de los campos del empleado
+2023-02-07 23:02:22 INFO  ValidacionCaracteres:14 - se inicia validacion de los campos de informacion personal
+2023-02-07 23:02:22 INFO  ValidacionCaracteres:25 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-07 23:02:22 ERROR QueryController:47 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario que intentas ingresar no es valida debido a su tamaño

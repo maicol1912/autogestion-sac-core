@@ -2,6 +2,7 @@ package automanage_user.automagane_user.aplication.Validaciones;
 
 import automanage_user.automagane_user.aplication.Exception.NotTokenValid;
 import automanage_user.automagane_user.aplication.Exception.NotValidException;
+import automanage_user.automagane_user.aplication.Exception.SpecifiedException;
 import automanage_user.automagane_user.commons.Exceptions.CodigoErrorEnum;
 import automanage_user.automagane_user.infraestructure.Controller.QueryController;
 import org.apache.log4j.Logger;
@@ -15,22 +16,17 @@ public class ValidacionCambioEstadoUsuario {
     private static final Logger LOGGER = Logger.getLogger(ValidacionCambioEstadoUsuario.class);
     @Autowired
     private JdbcTemplate jdbcTemplate;
-    public Boolean validarToken(String token){
 
-        LOGGER.info("se inicia validacion del token de autorizacion");
+    @Autowired
+    private ValidacionEmpleadoService validacionEmpleadoService;
 
-        String TOKEN_AUTENTICADOR = "1707a235937a8330cc761917450ffbad";
-        token = token.replace("Bearer ","");
-        if(token.isEmpty()){
-            throw new NotTokenValid(CodigoErrorEnum.NOT_TOKEN_VALID.getMessage());
-        }
-        if(!(token.equals(TOKEN_AUTENTICADOR))){
-            throw new NotTokenValid(CodigoErrorEnum.NOT_TOKEN_VALID.getMessage());
-        }
+    @Autowired
+    private ValidacionUsuarioService validacionUsuarioService;
 
-        LOGGER.info("el token se valido y el estado es -> valido");
-        return true;
-    }
+    @Autowired
+    private ValidacionUsuarioPorCajaService validacionUsuarioPorCajaService;
+
+
 
     public Boolean validarEstadoUsuarioParaCambio(String cedula){
         String ESTADO_ACTUAL_EMPLEADO = String.format("select epl_estado  from sai_empleado se where epl_nroid =  '%s' limit 1",cedula);
@@ -41,10 +37,14 @@ public class ValidacionCambioEstadoUsuario {
 
         LOGGER.info("se inicia validacion del estado del usuario a cambiar de estado");
 
-        if(jdbcTemplate.queryForObject(ESTADO_ACTUAL_EMPLEADO,String.class).equals("I")||jdbcTemplate.queryForObject(ESTADO_ACTUAL_USUARIO,String.class).equals("I")||
-           jdbcTemplate.queryForObject(ESTADO_ACTUAL_USUARIO_POR_CAJA,String.class).equals("I")){
-
-            throw new NotTokenValid(CodigoErrorEnum.USUARIO_YA_ACTIVO.getMessage());
+        if(jdbcTemplate.queryForObject(ESTADO_ACTUAL_EMPLEADO,String.class).equals("A")){
+            throw new SpecifiedException(CodigoErrorEnum.EMPLEADO_YA_ACTIVO.getMessage(),401);
+        }
+        if(jdbcTemplate.queryForObject(ESTADO_ACTUAL_USUARIO,String.class).equals("A")){
+            throw new SpecifiedException(CodigoErrorEnum.USUARIO_YA_ACTIVO.getMessage(),401);
+        }
+        if(jdbcTemplate.queryForObject(ESTADO_ACTUAL_USUARIO_POR_CAJA,String.class).equals("A")){
+            throw new SpecifiedException(CodigoErrorEnum.USUARIO_CAJA_YA_ACTIVO.getMessage(),401);
         }
 
         LOGGER.info("se valida que el usuario es apto para cambio de estado");

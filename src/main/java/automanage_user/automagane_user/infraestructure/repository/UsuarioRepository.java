@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.transaction.Transactional;
 
@@ -33,6 +34,8 @@ public class UsuarioRepository {
     private final String INSERT_USUARIO_POR_CAJA_LOG_2 = "INSERT INTO sac_logmaestros ( opc_opcion , usu_usuario , lma_nomtabla , " +
             "lma_operacion , lma_ip , lma_campos_modif , lma_fecha ) VALUES (?,?,?,?,?,?,?)";
 
+    private final String CAMBIAR_ESTADO_CLIENTE = "update sai_usuario set usu_estado = 'A'\n" +
+            "where epl_nroid = ?";
     @Transactional
     public UsuarioGeneralDto save(UsuarioGeneralDto u) throws DataAccessException{
         jdbcTemplate.update(INSERT_QUERY,u.getUsu_usuario(),u.getEpl_nroid(),"354c68cf3602cd244784bb01e14fc256",convertDate.obtenerLocalDate(),
@@ -50,6 +53,10 @@ public class UsuarioRepository {
         return u;
     }
 
-
+    @Transactional
+    public Boolean cambiarEstado(String cedula){
+        jdbcTemplate.update(CAMBIAR_ESTADO_CLIENTE,cedula);
+        return true;
+    }
 
 }

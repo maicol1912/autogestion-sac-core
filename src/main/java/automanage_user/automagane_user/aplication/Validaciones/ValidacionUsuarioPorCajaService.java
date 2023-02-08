@@ -20,9 +20,9 @@ public class ValidacionUsuarioPorCajaService {
         if(jdbcTemplate.queryForObject(FILTRAR_EXISTENCIA_PUNTO_CREDITO,int.class).equals(0)){
             throw new NotValidException(CodigoErrorEnum.EMPRESA_NO_EXISTE.getMessage());
         }
-        if(!(usuarioGeneralDto.getUsu_usuario().length()>4 && usuarioGeneralDto.getUsu_usuario().length()<10)){
+        if(!(usuarioGeneralDto.getUsu_usuario().length()>4 && usuarioGeneralDto.getUsu_usuario().length()<15)){
 
-            throw new NotValidException(CodigoErrorEnum.USUARIO_USADO.getMessage());
+            throw new NotValidException(CodigoErrorEnum.LONGITUD_USUARIO.getMessage());
         }
         LOGGER.info("se valida campos del usuario por caja y estos son -> validos");
         return true;

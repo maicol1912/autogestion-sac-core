@@ -24,6 +24,9 @@ public class EmpleadoRepository {
             "emp_empresa,tpl_tipopersona,car_cargo,epl_nombreuno,epl_nombredos," +
             "epl_apellidouno,epl_apellidodos,epl_fecha,epl_estado) values (?, ? ,? ,? ,? ,? ,? ,? ,?,?,?)";
 
+    private final String CAMBIAR_ESTADO_EMPLEADO = "update sai_usuario set usu_estado = 'A'\n" +
+            "where epl_nroid = ?";
+
     @Transactional
     public UsuarioGeneralDto save(UsuarioGeneralDto u){
         jdbcTemplate.update(INSERT_QUERY,13,u.getEpl_nroid(),u.getEmp_empresa(),2,
@@ -35,4 +38,10 @@ public class EmpleadoRepository {
         return u;
 
     }
+    @Transactional
+    public Boolean cambiarEstado(String cedula){
+        jdbcTemplate.update(CAMBIAR_ESTADO_EMPLEADO,cedula);
+        return true;
+    }
+
 }

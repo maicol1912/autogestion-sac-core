@@ -40,8 +40,7 @@ public class ValidacionEmpleadoService {
             throw new NotValidException(CodigoErrorEnum.DATOS_PERSONALES_NO_VLIDOS.getMessage());
         }
 
-        if(!(usuarioGeneralDto.getUsu_usuario().length()>4 && usuarioGeneralDto.getUsu_usuario().length()<10)){
-            System.out.println("entre validaciones");
+        if(!(usuarioGeneralDto.getUsu_usuario().length()>4 && usuarioGeneralDto.getUsu_usuario().length()<15)){
             throw new NotValidException(CodigoErrorEnum.LONGITUD_USUARIO.getMessage());
         }
 

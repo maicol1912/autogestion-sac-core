@@ -26,7 +26,9 @@ public enum CodigoErrorEnum {
     USUARIO_CAMBIAR_ESTADO("el usario el cual quieres activar no existe",409,HttpStatus.CONFLICT),
     USUARIO_CAJA_CAMBIAR_ESTADO("el usuario caja el cual quieres activar no existe",409,HttpStatus.CONFLICT),
     NOT_TOKEN_VALID("el token que estas usando no es valido",409,HttpStatus.CONFLICT),
-    USUARIO_YA_ACTIVO("el usuario que quieres activar ya esta activo",409,HttpStatus.CONFLICT);
+    USUARIO_YA_ACTIVO("el usuario que quieres activar ya esta activo",409,HttpStatus.CONFLICT),
+    EMPLEADO_YA_ACTIVO("el empleado que quieres activar ya esta activo",409,HttpStatus.CONFLICT),
+    USUARIO_CAJA_YA_ACTIVO("el usuario por caja que quieres activar ya esta activo",409,HttpStatus.CONFLICT);
     private String message;
     private Integer code;
 

@@ -24,6 +24,10 @@ public class ValidacionUsuarioService {
         if(!jdbcTemplate.queryForObject(FILTRAR_EXISTENCIA_USUARIO,int.class).equals(0)){
             throw new NotValidException(CodigoErrorEnum.USUARIO_USADO.getMessage());
         }
+        if(!(usuarioGeneraldto.getUsu_usuario().length()>4 && usuarioGeneraldto.getUsu_usuario().length()<15)){
+
+            throw new NotValidException(CodigoErrorEnum.USUARIO_USADO.getMessage());
+        }
         LOGGER.info("se valida campos del usuario  y estos son -> validos");
         return true;
     }

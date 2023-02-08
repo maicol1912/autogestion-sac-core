@@ -6,6 +6,7 @@ import automanage_user.automagane_user.aplication.Validaciones.ValidacionUsuario
 import automanage_user.automagane_user.domain.dto.UsuarioGeneralDto;
 import automanage_user.automagane_user.infraestructure.interfaceService.IUsuarioPorCaja;
 import automanage_user.automagane_user.infraestructure.repository.UsuarioPorCajaRepository;
+import automanage_user.automagane_user.infraestructure.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,7 +33,7 @@ public class UsuarioPorCajaService implements IUsuarioPorCaja {
         if(!validacionUsuarioPorCajaService.validateCambioEstadoUsuarioPorCaja(cedula)){
             return false;
         }
-        return true;
+        return usuarioPorCajaRepository.cambiarEstado(cedula);
     }
 
 

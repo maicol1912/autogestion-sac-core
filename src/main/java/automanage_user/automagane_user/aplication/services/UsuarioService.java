@@ -32,7 +32,7 @@ public class UsuarioService implements IUsuario {
         if(!validacionUsuarioService.validateCambioEstadoUsuario(cedula)){
             return false;
         }
-        return true;
+        return usuarioRepository.cambiarEstado(cedula);
     }
 
 
