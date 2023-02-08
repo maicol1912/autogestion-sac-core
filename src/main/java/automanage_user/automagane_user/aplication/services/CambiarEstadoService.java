@@ -4,6 +4,7 @@ import automanage_user.automagane_user.aplication.Validaciones.ValidacionEmplead
 import automanage_user.automagane_user.aplication.Validaciones.ValidacionUsuarioPorCajaService;
 import automanage_user.automagane_user.aplication.Validaciones.ValidacionUsuarioService;
 import automanage_user.automagane_user.infraestructure.repository.UsuarioPorCajaRepository;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,7 @@ import javax.transaction.Transactional;
 @Service
 public class CambiarEstadoService {
 
-
+    private static final Logger LOGGER = Logger.getLogger(CambiarEstadoService.class);
     @Autowired
     private ValidacionEmpleadoService validacionEmpleadoService;
 
@@ -43,6 +44,7 @@ public class CambiarEstadoService {
         usuarioService.cambiarEstadoUsuario(cedula);
         empleadoService.cambiarEstadoEmpleado(cedula);
         usuarioPorCajaRepository.cambiarEstado(cedula);
+        LOGGER.info("se valido el cambio de estado del usuario, y este es valido");
         return true;
     }
 }

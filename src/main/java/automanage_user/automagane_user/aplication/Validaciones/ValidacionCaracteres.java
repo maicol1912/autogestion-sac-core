@@ -6,9 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ValidacionCaracteres {
 
-    private static final Logger LOGGER = Logger.getLogger(ValidacionCaracteres.class);
     public Boolean validarCaracter(UsuarioGeneralDto usuarioGeneralDto){
-         LOGGER.info("se inicia validacion de los campos de informacion personal");
 
          String NOMBRE_UNO = usuarioGeneralDto.getEpl_nombreuno();
          String NOMBRE_DOS = usuarioGeneralDto.getEpl_nombredos();
@@ -19,7 +17,6 @@ public class ValidacionCaracteres {
             APELLIDO_UNO.matches(".*\\d.*") ||APELLIDO_DOS.matches(".*\\d.*")){
              return false;
          }
-         LOGGER.info("se realiza validacion de los campos de informacion personal y estos son -> validos");
          return true;
     }
 }

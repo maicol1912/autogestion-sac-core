@@ -12,12 +12,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class ValidacionUsuarioService {
 
-    private static final Logger LOGGER = Logger.getLogger(ValidacionUsuarioService.class);
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
     public Boolean validateUsuario(UsuarioGeneralDto usuarioGeneraldto){
-        LOGGER.info("se inicia validacion de los campos del usuario");
         String FILTRAR_EXISTENCIA_CEDULA = String.format("select COUNT(*) from sai_usuario su where epl_nroid = '%s'",usuarioGeneraldto.getEpl_nroid());
         String FILTRAR_EXISTENCIA_USUARIO = String.format("select COUNT(*) from sai_usuario su where usu_usuario  = '%s'",usuarioGeneraldto.getUsu_usuario());
 
@@ -29,9 +27,8 @@ public class ValidacionUsuarioService {
         }
         if(!(usuarioGeneraldto.getUsu_usuario().length()>4 && usuarioGeneraldto.getUsu_usuario().length()<10)){
 
-            throw new NotValidException(CodigoErrorEnum.USUARIO_USADO.getMessage());
+            throw new NotValidException(CodigoErrorEnum.LONGITUD_USUARIO.getMessage());
         }
-        LOGGER.info("se valida campos del usuario  y estos son -> validos");
         return true;
     }
 

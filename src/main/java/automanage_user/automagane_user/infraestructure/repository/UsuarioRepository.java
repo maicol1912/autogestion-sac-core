@@ -12,8 +12,6 @@ import javax.transaction.Transactional;
 @Component
 public class UsuarioRepository {
 
-    private static final Logger LOGGER = Logger.getLogger(UsuarioRepository.class);
-
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
@@ -47,9 +45,7 @@ public class UsuarioRepository {
         jdbcTemplate.update(INSERT_USUARIO_POR_CAJA_LOG_2,69,u.getUsu_usuario(),"sai_perfilporusu","I","10.212.140.17","Indicador: "+
                 u.getEpl_nroid()+" - "+u.getPuc_puntoCredito()+" - "+u.getEmp_empresa(),convertDate.obtenerLocalDate());
 
-        LOGGER.info(String.format("se realizo la insercion del usuario con cedula -> %s en la tabla sai_usuario",u.getEpl_nroid()));
-        LOGGER.info(String.format("se realizo la insercion del usuario con cedula -> %s en la tabla sac_logmaestros",u.getEpl_nroid()));
-        return u;
+       return u;
     }
 
     @Transactional

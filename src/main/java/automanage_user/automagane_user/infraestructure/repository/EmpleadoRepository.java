@@ -11,7 +11,6 @@ import javax.transaction.Transactional;
 
 @Component
 public class EmpleadoRepository {
-    private static final Logger LOGGER = Logger.getLogger(EmpleadoRepository.class);
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
@@ -29,8 +28,6 @@ public class EmpleadoRepository {
         jdbcTemplate.update(INSERT_QUERY,13,u.getEpl_nroid(),u.getEmp_empresa(),2,
                             2,u.getEpl_nombreuno(),u.getEpl_nombredos(),u.getEpl_apellidouno(),u.getEpl_apellidodos(),
                             convertDate.obtenerLocalDate(),"I");
-
-        LOGGER.info(String.format("se realizo la insercion del usuario con cedula -> %s en la tabla sai_empleado",u.getEpl_nroid()));
 
         return u;
 

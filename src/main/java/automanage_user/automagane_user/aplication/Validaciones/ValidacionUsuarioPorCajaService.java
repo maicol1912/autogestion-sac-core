@@ -10,12 +10,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ValidacionUsuarioPorCajaService {
-    private static final Logger LOGGER = Logger.getLogger(ValidacionUsuarioPorCajaService.class);
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
     public Boolean validateUsuarioPorCaja(UsuarioGeneralDto usuarioGeneralDto) {
-        LOGGER.info("se inicia validacion de los campos del usuario por caja");
         String FILTRAR_EXISTENCIA_PUNTO_CREDITO = String.format("select COUNT(*) from sac_puntocredito sp where emp_empresa = %s and puc_puntocredito = %s", usuarioGeneralDto.getEmp_empresa(), usuarioGeneralDto.getPuc_puntoCredito());
         if(jdbcTemplate.queryForObject(FILTRAR_EXISTENCIA_PUNTO_CREDITO,int.class).equals(0)){
             throw new NotValidException(CodigoErrorEnum.EMPRESA_NO_EXISTE.getMessage());
@@ -24,7 +22,6 @@ public class ValidacionUsuarioPorCajaService {
 
             throw new NotValidException(CodigoErrorEnum.LONGITUD_USUARIO.getMessage());
         }
-        LOGGER.info("se valida campos del usuario por caja y estos son -> validos");
         return true;
     }
 

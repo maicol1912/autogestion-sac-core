@@ -10,9 +10,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ValidacionEmpleadoService {
-
-    private static final Logger LOGGER = Logger.getLogger(ValidacionEmpleadoService.class);
-
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
@@ -20,7 +17,6 @@ public class ValidacionEmpleadoService {
     private ValidacionCaracteres validacionCaracteres;
 
     public Boolean validateEmpleado(UsuarioGeneralDto usuarioGeneralDto){
-        LOGGER.info("se inicia validacion de los campos del empleado");
         String FILTRAR_EXISTENCIA_CEDULA = String.format("select COUNT(*) from sai_empleado where epl_nroid = '%s'",usuarioGeneralDto.getEpl_nroid());
         String FILTRAR_EXISTENCIA_EMPRESA = String.format("select COUNT(*) from sac_empresa where emp_empresa = '%s'",usuarioGeneralDto.getEmp_empresa());
 
@@ -38,8 +34,6 @@ public class ValidacionEmpleadoService {
         if(!validacionCaracteres.validarCaracter(usuarioGeneralDto)){
             throw new NotValidException(CodigoErrorEnum.DATOS_PERSONALES_NO_VLIDOS.getMessage());
         }
-
-        LOGGER.info("se valida campos del empleado y estos son -> validos");
         return true;
     }
 

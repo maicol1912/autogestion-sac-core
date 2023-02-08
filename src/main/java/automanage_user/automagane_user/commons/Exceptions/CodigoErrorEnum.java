@@ -23,7 +23,7 @@ public enum CodigoErrorEnum {
     APELLIDO_1_NO_VALIDO("el apellido 1 que intentas ingresar no es valido",409,HttpStatus.CONFLICT),
     APELLIDO_2_NO_VALIDO("el apellido 2 que intentas ingresar no es valido",409,HttpStatus.CONFLICT),
     EMPLEADO_CAMBIAR_ESTADO("el empleado el cual quieres activar no existe",409,HttpStatus.CONFLICT),
-    USUARIO_CAMBIAR_ESTADO("el usario el cual quieres activar no existe",409,HttpStatus.CONFLICT),
+    USUARIO_CAMBIAR_ESTADO("el usuario el cual quieres activar no existe",409,HttpStatus.CONFLICT),
     USUARIO_CAJA_CAMBIAR_ESTADO("el usuario caja el cual quieres activar no existe",409,HttpStatus.CONFLICT),
     NOT_TOKEN_VALID("el token que estas usando no es valido",409,HttpStatus.CONFLICT),
     USUARIO_YA_ACTIVO("el usuario que quieres activar ya esta activo",409,HttpStatus.CONFLICT),

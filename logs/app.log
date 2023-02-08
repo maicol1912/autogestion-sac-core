@@ -92,3 +92,170 @@
 2023-02-07 23:20:32 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
 2023-02-07 23:20:32 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
 2023-02-07 23:20:32 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula del empleado ya esta en uso
+2023-02-08 08:58:51 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 08:58:51 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 08:58:51 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula del empleado ya esta en uso
+2023-02-08 08:58:59 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 08:58:59 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 08:58:59 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 08:59:08 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 08:59:08 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 08:59:08 INFO  ValidacionCaracteres:11 - se inicia validacion de los campos de informacion personal
+2023-02-08 08:59:08 INFO  ValidacionCaracteres:22 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-08 08:59:08 INFO  ValidacionEmpleadoService:42 - se valida campos del empleado y estos son -> validos
+2023-02-08 08:59:08 INFO  EmpleadoRepository:33 - se realizo la insercion del usuario con cedula -> 100734892 en la tabla sai_empleado
+2023-02-08 08:59:08 INFO  ValidacionUsuarioService:20 - se inicia validacion de los campos del usuario
+2023-02-08 08:59:08 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario ya esta usado
+2023-02-08 08:59:13 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 08:59:13 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 08:59:13 INFO  ValidacionCaracteres:11 - se inicia validacion de los campos de informacion personal
+2023-02-08 08:59:13 INFO  ValidacionCaracteres:22 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-08 08:59:13 INFO  ValidacionEmpleadoService:42 - se valida campos del empleado y estos son -> validos
+2023-02-08 08:59:13 INFO  EmpleadoRepository:33 - se realizo la insercion del usuario con cedula -> 100734892 en la tabla sai_empleado
+2023-02-08 08:59:13 INFO  ValidacionUsuarioService:20 - se inicia validacion de los campos del usuario
+2023-02-08 08:59:13 INFO  ValidacionUsuarioService:34 - se valida campos del usuario  y estos son -> validos
+2023-02-08 08:59:13 INFO  UsuarioRepository:50 - se realizo la insercion del usuario con cedula -> 100734892 en la tabla sai_usuario
+2023-02-08 08:59:13 INFO  UsuarioRepository:51 - se realizo la insercion del usuario con cedula -> 100734892 en la tabla sac_logmaestros
+2023-02-08 08:59:13 INFO  ValidacionUsuarioPorCajaService:18 - se inicia validacion de los campos del usuario por caja
+2023-02-08 08:59:13 INFO  ValidacionUsuarioPorCajaService:27 - se valida campos del usuario por caja y estos son -> validos
+2023-02-08 08:59:14 INFO  UsuarioPorCajaRepository:51 - se realizo la insercion del usuario -> amak19. en la tabla sac_usuarioporcaja
+2023-02-08 08:59:14 INFO  UsuarioPorCajaRepository:52 - se realizo la insercion del usuario -> amak19. en la tabla sac_logmaestros
+2023-02-08 08:59:56 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 08:59:56 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 08:59:56 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula del empleado ya esta en uso
+2023-02-08 09:00:04 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 09:00:04 ERROR ExceptionInterceptor:58 - automanage_user.automagane_user.aplication.Exception.NotFoundFields: los campos que intentas enviar no estan completos o mal nombrados
+2023-02-08 09:00:31 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 09:00:31 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 09:00:31 INFO  ValidacionCaracteres:11 - se inicia validacion de los campos de informacion personal
+2023-02-08 09:00:31 INFO  ValidacionCaracteres:22 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-08 09:00:31 INFO  ValidacionEmpleadoService:42 - se valida campos del empleado y estos son -> validos
+2023-02-08 09:00:31 INFO  EmpleadoRepository:33 - se realizo la insercion del usuario con cedula -> 100734891 en la tabla sai_empleado
+2023-02-08 09:00:31 INFO  ValidacionUsuarioService:20 - se inicia validacion de los campos del usuario
+2023-02-08 09:00:31 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario ya esta usado
+2023-02-08 09:00:35 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 09:00:35 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 09:00:35 INFO  ValidacionCaracteres:11 - se inicia validacion de los campos de informacion personal
+2023-02-08 09:00:35 INFO  ValidacionCaracteres:22 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-08 09:00:35 INFO  ValidacionEmpleadoService:42 - se valida campos del empleado y estos son -> validos
+2023-02-08 09:00:35 INFO  EmpleadoRepository:33 - se realizo la insercion del usuario con cedula -> 100734891 en la tabla sai_empleado
+2023-02-08 09:00:35 INFO  ValidacionUsuarioService:20 - se inicia validacion de los campos del usuario
+2023-02-08 09:00:35 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario ya esta usado
+2023-02-08 09:00:42 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 09:00:42 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 09:00:42 INFO  ValidacionCaracteres:11 - se inicia validacion de los campos de informacion personal
+2023-02-08 09:00:42 INFO  ValidacionCaracteres:22 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-08 09:00:42 INFO  ValidacionEmpleadoService:42 - se valida campos del empleado y estos son -> validos
+2023-02-08 09:00:42 INFO  EmpleadoRepository:33 - se realizo la insercion del usuario con cedula -> 100734891 en la tabla sai_empleado
+2023-02-08 09:00:42 INFO  ValidacionUsuarioService:20 - se inicia validacion de los campos del usuario
+2023-02-08 09:00:42 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario ya esta usado
+2023-02-08 09:00:45 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 09:00:45 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 09:00:45 INFO  ValidacionCaracteres:11 - se inicia validacion de los campos de informacion personal
+2023-02-08 09:00:45 INFO  ValidacionCaracteres:22 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-08 09:00:45 INFO  ValidacionEmpleadoService:42 - se valida campos del empleado y estos son -> validos
+2023-02-08 09:00:45 INFO  EmpleadoRepository:33 - se realizo la insercion del usuario con cedula -> 100734891 en la tabla sai_empleado
+2023-02-08 09:00:45 INFO  ValidacionUsuarioService:20 - se inicia validacion de los campos del usuario
+2023-02-08 09:00:45 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario ya esta usado
+2023-02-08 09:01:56 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 09:01:56 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 09:01:56 INFO  ValidacionCaracteres:11 - se inicia validacion de los campos de informacion personal
+2023-02-08 09:01:56 INFO  ValidacionCaracteres:22 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-08 09:01:56 INFO  ValidacionEmpleadoService:42 - se valida campos del empleado y estos son -> validos
+2023-02-08 09:01:56 INFO  EmpleadoRepository:33 - se realizo la insercion del usuario con cedula -> 100734891 en la tabla sai_empleado
+2023-02-08 09:01:56 INFO  ValidacionUsuarioService:20 - se inicia validacion de los campos del usuario
+2023-02-08 09:01:56 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario que intentas ingresar no es valida debido a su tamaño
+2023-02-08 09:02:03 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 09:02:03 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 09:02:03 INFO  ValidacionCaracteres:11 - se inicia validacion de los campos de informacion personal
+2023-02-08 09:02:03 INFO  ValidacionCaracteres:22 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-08 09:02:03 INFO  ValidacionEmpleadoService:42 - se valida campos del empleado y estos son -> validos
+2023-02-08 09:02:03 INFO  EmpleadoRepository:33 - se realizo la insercion del usuario con cedula -> 100734891 en la tabla sai_empleado
+2023-02-08 09:02:03 INFO  ValidacionUsuarioService:20 - se inicia validacion de los campos del usuario
+2023-02-08 09:02:03 INFO  ValidacionUsuarioService:34 - se valida campos del usuario  y estos son -> validos
+2023-02-08 09:02:03 INFO  UsuarioRepository:50 - se realizo la insercion del usuario con cedula -> 100734891 en la tabla sai_usuario
+2023-02-08 09:02:03 INFO  UsuarioRepository:51 - se realizo la insercion del usuario con cedula -> 100734891 en la tabla sac_logmaestros
+2023-02-08 09:02:03 INFO  ValidacionUsuarioPorCajaService:18 - se inicia validacion de los campos del usuario por caja
+2023-02-08 09:02:03 INFO  ValidacionUsuarioPorCajaService:27 - se valida campos del usuario por caja y estos son -> validos
+2023-02-08 09:02:04 INFO  UsuarioPorCajaRepository:51 - se realizo la insercion del usuario -> aa1sss9. en la tabla sac_usuarioporcaja
+2023-02-08 09:02:04 INFO  UsuarioPorCajaRepository:52 - se realizo la insercion del usuario -> aa1sss9. en la tabla sac_logmaestros
+2023-02-08 09:05:08 ERROR ExceptionInterceptor:82 - automanage_user.automagane_user.aplication.Exception.NotTokenValid: el token no es valido
+2023-02-08 09:05:23 INFO  ValidacionCambioEstadoUsuario:25 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:05:23 INFO  ValidacionCambioEstadoUsuario:37 - se valida que el usuario es apto para cambio de estado
+2023-02-08 09:05:30 INFO  ValidacionCambioEstadoUsuario:25 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:05:30 ERROR ExceptionInterceptor:20 - org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:97)
+2023-02-08 09:10:56 ERROR ExceptionInterceptor:82 - automanage_user.automagane_user.aplication.Exception.NotTokenValid: el token no es valido
+2023-02-08 09:11:11 INFO  ValidacionCambioEstadoUsuario:25 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:11:11 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: el usuario que quieres activar ya esta activo
+2023-02-08 09:11:23 INFO  ValidacionCambioEstadoUsuario:25 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:11:23 ERROR ExceptionInterceptor:20 - org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:97)
+2023-02-08 09:11:29 ERROR ExceptionInterceptor:82 - automanage_user.automagane_user.aplication.Exception.NotTokenValid: el token no es valido
+2023-02-08 09:11:41 INFO  ValidacionCambioEstadoUsuario:25 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:11:41 ERROR ExceptionInterceptor:20 - org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:97)
+2023-02-08 09:13:15 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:13:16 ERROR ExceptionInterceptor:20 - org.springframework.dao.support.DataAccessUtils.nullableSingleResult(DataAccessUtils.java:97)
+2023-02-08 09:14:36 ERROR ExceptionInterceptor:82 - automanage_user.automagane_user.aplication.Exception.NotTokenValid: el token no es valido
+2023-02-08 09:14:52 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:14:53 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: la cedula no existe
+2023-02-08 09:15:04 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:15:04 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: la cedula no existe
+2023-02-08 09:15:24 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:15:24 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: la cedula no existe
+2023-02-08 09:16:08 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:16:08 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: la cedula no existe
+2023-02-08 09:16:10 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:16:10 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: la cedula no existe
+2023-02-08 09:16:25 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:16:25 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: el usuario que quieres activar ya esta activo
+2023-02-08 09:16:40 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 09:16:40 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 09:16:40 INFO  ValidacionCaracteres:11 - se inicia validacion de los campos de informacion personal
+2023-02-08 09:16:40 INFO  ValidacionCaracteres:22 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-08 09:16:40 INFO  ValidacionEmpleadoService:42 - se valida campos del empleado y estos son -> validos
+2023-02-08 09:16:40 INFO  EmpleadoRepository:33 - se realizo la insercion del usuario con cedula -> 1007134891 en la tabla sai_empleado
+2023-02-08 09:16:40 INFO  ValidacionUsuarioService:20 - se inicia validacion de los campos del usuario
+2023-02-08 09:16:40 INFO  ValidacionUsuarioService:34 - se valida campos del usuario  y estos son -> validos
+2023-02-08 09:16:40 INFO  UsuarioRepository:50 - se realizo la insercion del usuario con cedula -> 1007134891 en la tabla sai_usuario
+2023-02-08 09:16:40 INFO  UsuarioRepository:51 - se realizo la insercion del usuario con cedula -> 1007134891 en la tabla sac_logmaestros
+2023-02-08 09:16:40 INFO  ValidacionUsuarioPorCajaService:18 - se inicia validacion de los campos del usuario por caja
+2023-02-08 09:16:40 INFO  ValidacionUsuarioPorCajaService:27 - se valida campos del usuario por caja y estos son -> validos
+2023-02-08 09:16:41 INFO  UsuarioPorCajaRepository:51 - se realizo la insercion del usuario -> aa1Ssss9. en la tabla sac_usuarioporcaja
+2023-02-08 09:16:41 INFO  UsuarioPorCajaRepository:52 - se realizo la insercion del usuario -> aa1Ssss9. en la tabla sac_logmaestros
+2023-02-08 09:16:48 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:16:49 INFO  ValidacionCambioEstadoUsuario:46 - se valida que el usuario es apto para cambio de estado
+2023-02-08 09:17:01 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:17:01 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: el usuario que quieres activar ya esta activo
+2023-02-08 09:17:17 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 09:17:17 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 09:17:17 INFO  ValidacionCaracteres:11 - se inicia validacion de los campos de informacion personal
+2023-02-08 09:17:17 INFO  ValidacionCaracteres:22 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-08 09:17:17 INFO  ValidacionEmpleadoService:42 - se valida campos del empleado y estos son -> validos
+2023-02-08 09:17:17 INFO  EmpleadoRepository:33 - se realizo la insercion del usuario con cedula -> 100534891 en la tabla sai_empleado
+2023-02-08 09:17:17 INFO  ValidacionUsuarioService:20 - se inicia validacion de los campos del usuario
+2023-02-08 09:17:17 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario que intentas ingresar no es valida debido a su tamaño
+2023-02-08 09:17:23 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 09:17:23 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 09:17:23 INFO  ValidacionCaracteres:11 - se inicia validacion de los campos de informacion personal
+2023-02-08 09:17:23 INFO  ValidacionCaracteres:22 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-08 09:17:23 INFO  ValidacionEmpleadoService:42 - se valida campos del empleado y estos son -> validos
+2023-02-08 09:17:23 INFO  EmpleadoRepository:33 - se realizo la insercion del usuario con cedula -> 100534891 en la tabla sai_empleado
+2023-02-08 09:17:23 INFO  ValidacionUsuarioService:20 - se inicia validacion de los campos del usuario
+2023-02-08 09:17:23 INFO  ValidacionUsuarioService:34 - se valida campos del usuario  y estos son -> validos
+2023-02-08 09:17:23 INFO  UsuarioRepository:50 - se realizo la insercion del usuario con cedula -> 100534891 en la tabla sai_usuario
+2023-02-08 09:17:23 INFO  UsuarioRepository:51 - se realizo la insercion del usuario con cedula -> 100534891 en la tabla sac_logmaestros
+2023-02-08 09:17:23 INFO  ValidacionUsuarioPorCajaService:18 - se inicia validacion de los campos del usuario por caja
+2023-02-08 09:17:23 INFO  ValidacionUsuarioPorCajaService:27 - se valida campos del usuario por caja y estos son -> validos
+2023-02-08 09:17:25 INFO  UsuarioPorCajaRepository:51 - se realizo la insercion del usuario -> dass9. en la tabla sac_usuarioporcaja
+2023-02-08 09:17:25 INFO  UsuarioPorCajaRepository:52 - se realizo la insercion del usuario -> dass9. en la tabla sac_logmaestros
+2023-02-08 09:17:33 ERROR ExceptionInterceptor:20 - org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver.handleMissingValue(RequestHeaderMethodArgumentResolver.java:87)
+2023-02-08 09:17:52 ERROR ExceptionInterceptor:82 - automanage_user.automagane_user.aplication.Exception.NotTokenValid: el token no es valido
+2023-02-08 09:17:59 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:17:59 INFO  ValidacionCambioEstadoUsuario:46 - se valida que el usuario es apto para cambio de estado
+2023-02-08 09:19:01 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:19:02 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: el usuario que quieres activar ya esta activo
+2023-02-08 09:19:03 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:19:03 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: el usuario que quieres activar ya esta activo
+2023-02-08 09:19:08 ERROR ExceptionInterceptor:82 - automanage_user.automagane_user.aplication.Exception.NotTokenValid: el token no es valido
+2023-02-08 09:19:21 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:19:21 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: el usuario que quieres activar ya esta activo
+2023-02-08 09:19:59 ERROR ExceptionInterceptor:82 - automanage_user.automagane_user.aplication.Exception.NotTokenValid: el token no es valido

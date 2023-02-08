@@ -15,12 +15,10 @@ import java.util.List;
 
 @Component
 public class UsuarioPorCajaRepository {
-    private static final Logger LOGGER = Logger.getLogger(UsuarioPorCajaRepository.class);
     @Autowired
     private JdbcTemplate jdbcTemplate;
     @Autowired
     private ConvertDate convertDate;
-
     @Autowired
     private ObtenerSecuencia obtenerSecuencia;
 
@@ -47,9 +45,6 @@ public class UsuarioPorCajaRepository {
         }
         jdbcTemplate.update(INSERT_USUARIO_POR_CAJA_LOG,57,ug.getUsu_usuario(),"sac_usuarioporcaja","N","10.212.140.17","usuario: "+
                 ug.getEpl_nroid(),convertDate.obtenerLocalDate());
-
-        LOGGER.info(String.format("se realizo la insercion del usuario -> %s en la tabla sac_usuarioporcaja",ug.getUsu_usuario()));
-        LOGGER.info(String.format("se realizo la insercion del usuario -> %s en la tabla sac_logmaestros", ug.getUsu_usuario()));
 
         return ug;
     }

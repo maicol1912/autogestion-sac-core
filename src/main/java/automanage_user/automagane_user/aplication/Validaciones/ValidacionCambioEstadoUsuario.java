@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class ValidacionCambioEstadoUsuario {
 
-    private static final Logger LOGGER = Logger.getLogger(ValidacionCambioEstadoUsuario.class);
     
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -21,9 +20,17 @@ public class ValidacionCambioEstadoUsuario {
         String ESTADO_ACTUAL_USUARIO_POR_CAJA = String.format("select distinct (uc.upc_estado) from sai_usuario su\n" +
                 "inner join sac_usuarioporcaja uc on su.usu_usuario = uc.usu_usuario \n" +
                 "where su.epl_nroid = '%s'",cedula);
+        String ESTADO_ACTUAL_EMPLEADO_COUNT = String.format("select COUNT(*)  from sai_empleado se where epl_nroid =  '%s' limit 1",cedula);
+        String ESTADO_ACTUAL_USUARIO_COUNT = String.format("select COUNT(*)  from sai_usuario su where epl_nroid =  '%s' limit 1",cedula);
+        String ESTADO_ACTUAL_USUARIO_POR_CAJA_COUNT = String.format("select COUNT (*) from sai_usuario su\n" +
+                "inner join sac_usuarioporcaja uc on su.usu_usuario = uc.usu_usuario \n" +
+                "where su.epl_nroid = '%s'",cedula);
 
-        LOGGER.info("se inicia validacion del estado del usuario a cambiar de estado");
-
+        if(jdbcTemplate.queryForObject(ESTADO_ACTUAL_EMPLEADO_COUNT,Integer.class).equals(0)||
+           jdbcTemplate.queryForObject(ESTADO_ACTUAL_USUARIO_COUNT,Integer.class).equals(0)||
+           jdbcTemplate.queryForObject(ESTADO_ACTUAL_USUARIO_POR_CAJA_COUNT,Integer.class).equals(0)){
+            throw new SpecifiedException(CodigoErrorEnum.CEDULA_NO_EXISTE.getMessage(),401);
+        }
         if(jdbcTemplate.queryForObject(ESTADO_ACTUAL_EMPLEADO,String.class).equals("A")){
             throw new SpecifiedException(CodigoErrorEnum.EMPLEADO_YA_ACTIVO.getMessage(),401);
         }
@@ -34,7 +41,6 @@ public class ValidacionCambioEstadoUsuario {
             throw new SpecifiedException(CodigoErrorEnum.USUARIO_CAJA_YA_ACTIVO.getMessage(),401);
         }
 
-        LOGGER.info("se valida que el usuario es apto para cambio de estado");
         return true;
     }
 }
