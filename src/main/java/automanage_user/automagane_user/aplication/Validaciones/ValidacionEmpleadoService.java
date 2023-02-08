@@ -20,6 +20,9 @@ public class ValidacionEmpleadoService {
         String FILTRAR_EXISTENCIA_CEDULA = String.format("select COUNT(*) from sai_empleado where epl_nroid = '%s'",usuarioGeneralDto.getEpl_nroid());
         String FILTRAR_EXISTENCIA_EMPRESA = String.format("select COUNT(*) from sac_empresa where emp_empresa = '%s'",usuarioGeneralDto.getEmp_empresa());
 
+        if(!usuarioGeneralDto.getEpl_nroid().matches(".*\\d.*")){
+            throw new NotValidException(CodigoErrorEnum.CEDULA_CONTIENE_LETRAS.getMessage());
+        }
         if(!jdbcTemplate.queryForObject(FILTRAR_EXISTENCIA_CEDULA,int.class).equals(0)){
             throw new NotValidException(CodigoErrorEnum.EMPLEADO_CEDULA_USED.getMessage());
         }

@@ -259,3 +259,351 @@
 2023-02-08 09:19:21 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
 2023-02-08 09:19:21 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: el usuario que quieres activar ya esta activo
 2023-02-08 09:19:59 ERROR ExceptionInterceptor:82 - automanage_user.automagane_user.aplication.Exception.NotTokenValid: el token no es valido
+2023-02-08 09:20:23 ERROR ExceptionInterceptor:82 - automanage_user.automagane_user.aplication.Exception.NotTokenValid: el token no es valido
+2023-02-08 09:20:39 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:20:39 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: el usuario que quieres activar ya esta activo
+2023-02-08 09:21:28 INFO  ValidacionCambioEstadoUsuario:30 - se inicia validacion del estado del usuario a cambiar de estado
+2023-02-08 09:21:28 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: el usuario que quieres activar ya esta activo
+2023-02-08 09:21:47 ERROR ExceptionInterceptor:82 - automanage_user.automagane_user.aplication.Exception.NotTokenValid: el token no es valido
+2023-02-08 09:36:22 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 09:36:22 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 09:36:22 INFO  ValidacionCaracteres:11 - se inicia validacion de los campos de informacion personal
+2023-02-08 09:36:22 INFO  ValidacionCaracteres:22 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-08 09:36:22 INFO  ValidacionEmpleadoService:42 - se valida campos del empleado y estos son -> validos
+2023-02-08 09:36:22 INFO  EmpleadoRepository:33 - se realizo la insercion del usuario con cedula -> 1005348911 en la tabla sai_empleado
+2023-02-08 09:36:22 INFO  ValidacionUsuarioService:20 - se inicia validacion de los campos del usuario
+2023-02-08 09:36:22 INFO  ValidacionUsuarioService:34 - se valida campos del usuario  y estos son -> validos
+2023-02-08 09:36:23 INFO  UsuarioRepository:50 - se realizo la insercion del usuario con cedula -> 1005348911 en la tabla sai_usuario
+2023-02-08 09:36:23 INFO  UsuarioRepository:51 - se realizo la insercion del usuario con cedula -> 1005348911 en la tabla sac_logmaestros
+2023-02-08 09:36:23 INFO  ValidacionUsuarioPorCajaService:18 - se inicia validacion de los campos del usuario por caja
+2023-02-08 09:36:23 INFO  ValidacionUsuarioPorCajaService:27 - se valida campos del usuario por caja y estos son -> validos
+2023-02-08 09:36:23 INFO  UsuarioPorCajaRepository:51 - se realizo la insercion del usuario -> xass9. en la tabla sac_usuarioporcaja
+2023-02-08 09:36:23 INFO  UsuarioPorCajaRepository:52 - se realizo la insercion del usuario -> xass9. en la tabla sac_logmaestros
+2023-02-08 09:40:00 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 09:40:00 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 09:40:00 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 09:40:06 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 09:40:06 INFO  ValidacionEmpleadoService:23 - se inicia validacion de los campos del empleado
+2023-02-08 09:40:06 INFO  ValidacionCaracteres:11 - se inicia validacion de los campos de informacion personal
+2023-02-08 09:40:06 INFO  ValidacionCaracteres:22 - se realiza validacion de los campos de informacion personal y estos son -> validos
+2023-02-08 09:40:06 INFO  ValidacionEmpleadoService:42 - se valida campos del empleado y estos son -> validos
+2023-02-08 09:40:06 INFO  EmpleadoRepository:33 - se realizo la insercion del usuario con cedula -> 10418911 en la tabla sai_empleado
+2023-02-08 09:40:06 INFO  ValidacionUsuarioService:20 - se inicia validacion de los campos del usuario
+2023-02-08 09:40:06 INFO  ValidacionUsuarioService:34 - se valida campos del usuario  y estos son -> validos
+2023-02-08 09:40:06 INFO  UsuarioRepository:50 - se realizo la insercion del usuario con cedula -> 10418911 en la tabla sai_usuario
+2023-02-08 09:40:06 INFO  UsuarioRepository:51 - se realizo la insercion del usuario con cedula -> 10418911 en la tabla sac_logmaestros
+2023-02-08 09:40:06 INFO  ValidacionUsuarioPorCajaService:18 - se inicia validacion de los campos del usuario por caja
+2023-02-08 09:40:06 INFO  ValidacionUsuarioPorCajaService:27 - se valida campos del usuario por caja y estos son -> validos
+2023-02-08 09:40:06 INFO  UsuarioPorCajaRepository:51 - se realizo la insercion del usuario -> raish. en la tabla sac_usuarioporcaja
+2023-02-08 09:40:06 INFO  UsuarioPorCajaRepository:52 - se realizo la insercion del usuario -> raish. en la tabla sac_logmaestros
+2023-02-08 12:45:24 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 12:45:24 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 12:45:46 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 12:45:46 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 12:46:02 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 12:46:02 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 12:46:02 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 12:46:03 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 12:47:26 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 12:47:26 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 12:47:40 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 12:47:40 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 12:47:58 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 12:47:58 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 12:47:58 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 12:47:58 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 12:49:41 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 12:49:41 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 12:49:47 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 12:49:47 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 12:49:55 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 12:49:55 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 12:49:55 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario que intentas ingresar no es valida debido a su tamaño
+2023-02-08 12:50:14 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 12:50:14 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 12:50:14 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario que intentas ingresar no es valida debido a su tamaño
+2023-02-08 12:50:20 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 12:50:20 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 12:50:20 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 12:50:20 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 12:50:59 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 12:50:59 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 12:51:07 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 12:51:07 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 12:51:16 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 12:51:16 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 12:51:22 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 12:51:22 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 12:51:22 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario que intentas ingresar no es valida debido a su tamaño
+2023-02-08 12:52:20 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 12:52:20 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 12:52:24 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 12:52:24 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 12:52:29 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 12:52:29 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 12:53:30 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 12:53:30 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 12:57:27 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 12:57:27 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 12:57:33 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 12:57:33 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 12:57:40 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 12:57:41 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 12:58:09 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 12:58:09 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 12:58:14 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 12:58:14 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 12:58:18 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 12:58:18 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 12:58:34 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 12:58:34 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 12:58:40 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 12:58:40 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 12:58:44 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 12:58:44 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 12:59:03 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 12:59:03 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 12:59:08 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 12:59:08 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 12:59:15 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 12:59:15 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 13:00:04 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:00:04 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:00:09 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 13:00:09 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 13:00:14 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:00:14 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 13:00:36 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:00:36 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:00:42 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 13:00:42 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 13:00:48 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:00:48 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 13:01:04 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:01:04 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:01:14 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:01:14 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:01:36 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:01:36 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:01:40 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 13:01:40 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 13:01:46 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:01:46 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 13:01:52 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:01:52 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:01:52 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario que intentas ingresar no es valida debido a su tamaño
+2023-02-08 13:01:55 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:01:55 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:01:55 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:01:56 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:03:12 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:03:12 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:03:13 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:03:13 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:04:12 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:04:12 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:04:26 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 13:04:26 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 13:04:33 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:04:33 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:04:33 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario ya esta usado
+2023-02-08 13:04:36 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:04:36 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:04:36 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:04:36 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:04:50 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:04:50 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:04:56 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 13:04:56 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 13:05:04 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:05:04 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:05:04 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:05:05 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:05:09 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:05:09 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:05:25 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:05:25 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:21:06 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:21:06 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:21:49 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:21:49 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:21:54 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:21:54 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:22:11 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:22:11 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:22:24 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 13:22:24 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 13:22:30 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:22:30 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:22:30 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:22:31 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:22:33 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:22:33 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:22:52 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:22:52 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:22:57 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 13:22:57 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 13:23:20 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:23:20 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:23:20 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:23:20 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:23:51 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:23:51 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:24:15 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:24:15 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 13:24:49 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:24:49 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:25:43 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:25:43 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:26:05 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:26:05 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:26:12 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 13:26:12 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 13:26:22 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:26:22 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula del empleado ya esta en uso
+2023-02-08 13:26:27 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:26:27 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 13:26:30 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:26:30 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:26:30 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:26:30 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:26:57 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:26:57 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:27:37 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:27:37 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:27:50 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:27:50 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:27:59 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 13:27:59 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 13:28:05 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:28:05 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 13:29:48 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:29:48 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:30:01 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 13:30:01 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 13:30:13 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:30:13 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:30:13 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:30:13 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:30:16 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:30:16 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:30:24 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 13:30:24 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 13:30:28 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:30:28 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 13:30:55 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:30:55 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:31:10 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:31:10 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:31:16 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:31:16 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:31:23 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:31:23 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:31:30 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:31:30 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:31:46 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:31:46 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:32:05 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:32:05 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:32:14 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:32:14 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:32:21 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:32:21 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:32:28 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:32:28 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:32:34 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:32:34 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:32:50 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:32:50 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:32:54 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:32:54 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:33:05 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:33:05 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:33:16 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:33:16 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:33:36 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:33:36 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:33:40 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:33:40 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:33:49 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 13:33:49 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 13:33:54 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:33:54 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 13:34:14 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:34:14 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:34:29 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:34:29 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:36:22 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:36:22 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:37:09 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:37:09 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:37:16 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:37:16 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:37:34 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:37:34 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:37:40 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:37:40 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:37:51 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:37:51 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:37:56 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:37:56 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:39:21 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:39:21 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:39:43 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:39:43 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:39:48 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:39:48 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:39:52 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:39:52 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:40:11 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:40:11 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:40:24 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:40:24 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:40:30 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:40:30 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:40:39 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:40:39 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:42:39 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:42:39 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:43:50 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:43:50 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:44:59 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:44:59 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:47:55 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:47:55 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:48:01 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:48:01 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:49:34 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:49:34 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:49:55 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:49:55 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:50:10 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:50:10 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:51:28 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:51:28 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:52:25 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:52:25 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:52:28 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:52:28 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:52:57 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:52:57 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:53:06 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:53:06 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:53:12 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 13:53:12 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 13:53:34 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:53:34 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula del empleado ya esta en uso
+2023-02-08 13:53:38 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:53:38 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula del empleado ya esta en uso
+2023-02-08 13:53:46 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:53:46 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:53:46 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:53:46 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:57:19 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 13:57:19 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:57:19 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 13:57:19 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 14:00:44 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 14:00:44 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar contiene letras
+2023-02-08 14:00:51 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 14:00:51 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar contiene letras
