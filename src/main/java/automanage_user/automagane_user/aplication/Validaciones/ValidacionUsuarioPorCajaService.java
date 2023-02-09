@@ -18,10 +18,7 @@ public class ValidacionUsuarioPorCajaService {
         if(jdbcTemplate.queryForObject(FILTRAR_EXISTENCIA_PUNTO_CREDITO,int.class).equals(0)){
             throw new NotValidException(CodigoErrorEnum.EMPRESA_NO_EXISTE.getMessage());
         }
-        if(!(usuarioGeneralDto.getUsu_usuario().length()>4 && usuarioGeneralDto.getUsu_usuario().length()<10)){
 
-            throw new NotValidException(CodigoErrorEnum.LONGITUD_USUARIO.getMessage());
-        }
         return true;
     }
 

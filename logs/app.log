@@ -685,3 +685,73 @@
 2023-02-08 14:15:33 INFO  EmpresaService:20 - se listan las empresas disponibles
 2023-02-08 14:15:37 INFO  QueryController:46 - se inicia listado de las empresas
 2023-02-08 14:15:37 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 15:00:49 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 15:00:49 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 15:03:42 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 15:03:42 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 15:04:11 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 15:04:11 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula del empleado ya esta en uso
+2023-02-08 15:04:17 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 15:04:17 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:04:17 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: el usuario que intentas ingresar no es valida debido a su tamaño
+2023-02-08 15:04:31 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 15:04:31 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:04:31 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:04:31 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:04:42 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 15:04:42 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula que intentas ingresar no es valida debido a su tamaño
+2023-02-08 15:04:50 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 15:04:50 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula del empleado ya esta en uso
+2023-02-08 15:05:47 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 15:05:47 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:05:48 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:05:48 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:11:03 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 15:11:03 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 15:11:22 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 15:11:22 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:11:22 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:11:22 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:13:51 INFO  TokenService:20 - se realiza la generacion del token
+2023-02-08 15:14:54 ERROR ExceptionInterceptor:82 - automanage_user.automagane_user.aplication.Exception.NotTokenValid: el token no es valido
+2023-02-08 15:14:58 INFO  TokenService:20 - se realiza la generacion del token
+2023-02-08 15:15:07 INFO  TokenService:47 - se valida el token y este es valido
+2023-02-08 15:15:07 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: el usuario que quieres activar ya esta activo
+2023-02-08 15:15:19 INFO  TokenService:47 - se valida el token y este es valido
+2023-02-08 15:15:19 INFO  UsuarioService:39 - se realizo el cambio de estado del usuario
+2023-02-08 15:15:19 INFO  EmpleadoService:38 - se realizo el cambio de estado del empleado
+2023-02-08 15:15:19 INFO  CambiarEstadoService:47 - se valido el cambio de estado del usuario, y este es valido
+2023-02-08 15:17:38 ERROR ExceptionInterceptor:82 - automanage_user.automagane_user.aplication.Exception.NotTokenValid: el token no es valido
+2023-02-08 15:17:44 INFO  TokenService:20 - se realiza la generacion del token
+2023-02-08 15:19:07 INFO  TokenService:20 - se realiza la generacion del token
+2023-02-08 15:19:16 INFO  TokenService:47 - se valida el token y este es valido
+2023-02-08 15:19:16 ERROR ExceptionInterceptor:32 - automanage_user.automagane_user.aplication.Exception.SpecifiedException: la cedula no existe
+2023-02-08 15:28:30 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 15:28:30 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 15:28:34 INFO  QueryController:39 - se inicia listado de los puntos de credito
+2023-02-08 15:28:34 INFO  EmpresaService:21 - se listan los punto de creditos disponibles
+2023-02-08 15:29:08 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 15:29:08 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula del empleado ya esta en uso
+2023-02-08 15:29:28 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 15:29:28 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:29:28 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:29:28 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:29:32 INFO  QueryController:46 - se inicia listado de las empresas
+2023-02-08 15:29:32 INFO  EmpresaService:20 - se listan las empresas disponibles
+2023-02-08 15:30:01 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 15:30:01 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la cedula del empleado ya esta en uso
+2023-02-08 15:30:36 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 15:30:36 ERROR ExceptionInterceptor:58 - automanage_user.automagane_user.aplication.Exception.NotFoundFields: los campos que intentas enviar no estan completos o mal nombrados
+2023-02-08 15:30:45 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 15:30:45 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: los datos ingresados de nombres o apellidos no son validos
+2023-02-08 15:30:59 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 15:30:59 ERROR ExceptionInterceptor:46 - automanage_user.automagane_user.aplication.Exception.NotValidException: la empresa que intentas ingresar no existe
+2023-02-08 15:31:34 INFO  UsuarioController:34 - Se inicia proceso de guardado de la entidad usuarioGeneralDto en la tabla de sai_usuario, sai_empleado, sac_usuarioporcaja
+2023-02-08 15:31:34 INFO  EmpleadoService:26 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:31:34 INFO  UsuarioService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:31:34 INFO  UsuarioPorCajaService:27 - el empleado es valido y se inserto en la base de datos
+2023-02-08 15:33:46 INFO  TokenService:20 - se realiza la generacion del token
+2023-02-08 15:34:14 INFO  TokenService:47 - se valida el token y este es valido
+2023-02-08 15:34:15 INFO  UsuarioService:39 - se realizo el cambio de estado del usuario
+2023-02-08 15:34:15 INFO  EmpleadoService:38 - se realizo el cambio de estado del empleado
+2023-02-08 15:34:15 INFO  CambiarEstadoService:47 - se valido el cambio de estado del usuario, y este es valido

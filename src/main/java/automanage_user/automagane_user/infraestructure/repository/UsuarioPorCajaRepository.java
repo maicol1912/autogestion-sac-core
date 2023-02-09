@@ -41,9 +41,9 @@ public class UsuarioPorCajaRepository {
 
         for(int acum = 0;acum<=cajaPuc.size()-1;acum++){
                 jdbcTemplate.update(INSERT_USUARIO_POR_CAJA_QUERY, ug.getEmp_empresa(),ug.getPuc_puntoCredito(),cajaPuc.get(acum).getTipodoc(),cajaPuc.get(acum).getSecuencia(),
-                        cajaPuc.get(acum).getCajapuc(),ug.getUsu_usuario(), convertDate.obtenerLocalDate(), "I");
+                        cajaPuc.get(acum).getCajapuc(),ug.getEpl_nroid(), convertDate.obtenerLocalDate(), "I");
         }
-        jdbcTemplate.update(INSERT_USUARIO_POR_CAJA_LOG,57,ug.getUsu_usuario(),"sac_usuarioporcaja","N","10.212.140.17","usuario: "+
+        jdbcTemplate.update(INSERT_USUARIO_POR_CAJA_LOG,57,ug.getEpl_nroid(),"sac_usuarioporcaja","N","10.212.140.17","usuario: "+
                 ug.getEpl_nroid(),convertDate.obtenerLocalDate());
 
         return ug;

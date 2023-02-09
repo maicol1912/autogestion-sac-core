@@ -22,6 +22,5 @@ public class UsuarioGeneralDto {
 
     private String epl_apellidodos;
 
-    private String usu_usuario;
 
 }

@@ -17,17 +17,13 @@ public class ValidacionUsuarioService {
 
     public Boolean validateUsuario(UsuarioGeneralDto usuarioGeneraldto){
         String FILTRAR_EXISTENCIA_CEDULA = String.format("select COUNT(*) from sai_usuario su where epl_nroid = '%s'",usuarioGeneraldto.getEpl_nroid());
-        String FILTRAR_EXISTENCIA_USUARIO = String.format("select COUNT(*) from sai_usuario su where usu_usuario  = '%s'",usuarioGeneraldto.getUsu_usuario());
+        String FILTRAR_EXISTENCIA_USUARIO = String.format("select COUNT(*) from sai_usuario su where usu_usuario  = '%s'",usuarioGeneraldto.getEpl_nroid());
 
         if(!jdbcTemplate.queryForObject(FILTRAR_EXISTENCIA_USUARIO,int.class).equals(0)){
             throw new NotValidException(CodigoErrorEnum.USUARIO_USADO.getMessage());
         }
         if(!jdbcTemplate.queryForObject(FILTRAR_EXISTENCIA_CEDULA,int.class).equals(0)){
             throw new NotValidException(CodigoErrorEnum.CEDULA_NO_EXISTE.getMessage());
-        }
-        if(!(usuarioGeneraldto.getUsu_usuario().length()>4 && usuarioGeneraldto.getUsu_usuario().length()<10)){
-
-            throw new NotValidException(CodigoErrorEnum.LONGITUD_USUARIO.getMessage());
         }
         return true;
     }
