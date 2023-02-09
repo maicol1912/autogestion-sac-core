@@ -33,6 +33,7 @@ public class EmpleadoService implements IEmpleado {
     @Override
     public Boolean cambiarEstadoEmpleado(String cedula) {
         if(!validacionEmpleadoService.validateCambioEstadoEmpleado(cedula)){
+            LOGGER.info("no se  cambio el estado del empleado ya que no fue posible realizarlo");
             return false;
         }
         LOGGER.info("se realizo el cambio de estado del empleado");

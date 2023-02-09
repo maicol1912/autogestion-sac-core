@@ -17,6 +17,11 @@ public class ValidacionCaracteres {
             APELLIDO_UNO.matches(".*\\d.*") ||APELLIDO_DOS.matches(".*\\d.*")){
              return false;
          }
+
+         if(!((NOMBRE_UNO.length()>4 && NOMBRE_UNO.length()<21)||(NOMBRE_DOS.length()>1 && NOMBRE_UNO.length()<21)||
+             (APELLIDO_UNO.length()>4 && NOMBRE_UNO.length()<21)||(APELLIDO_DOS.length()>4 && NOMBRE_UNO.length()<21))){
+             return false;
+         }
          return true;
     }
 }

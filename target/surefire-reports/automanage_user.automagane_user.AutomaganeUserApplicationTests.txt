@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: automanage_user.automagane_user.AutomaganeUserApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.633 s - in automanage_user.automagane_user.AutomaganeUserApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.642 s - in automanage_user.automagane_user.AutomaganeUserApplicationTests
